@@ -1,6 +1,6 @@
 import React from "react";
 import { IoCloseOutline } from "react-icons/io5";
-import Button from "../Shared/Button";
+import Button from "../components/Shared/Button"
 
 const Popup = ({ orderPopup, handleOrderPopup }) => {
   return (

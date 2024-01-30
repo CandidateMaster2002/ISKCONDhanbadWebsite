@@ -1,12 +1,12 @@
 import React from "react";
-import gaurnitai from "../../assets/gaur-nitai-contactus.png";
-import iskcondhanbadlogo from "../../assets/iskcon-dhanbad-image.jpg";
-import Partners from "../Partners/Partners";
-import whatsapp from "../../assets/whatsapp.png";
-import instagram from "../../assets/Instagram.webp";
-import call from "../../assets/call2.png";
-import youtube from "../../assets/youtube3.png";
-import facebook from "../../assets/Facebook.png";
+import gaurnitai from "../assets/gaur-nitai-contactus.png";
+import iskcondhanbadlogo from "../assets/iskcon-dhanbad-image.jpg";
+import SocialMediaLinks from "../components/SocialMediaLinks";
+import whatsapp from "../assets/whatsapp.png";
+import instagram from "../assets/Instagram.webp";
+import call from "../assets/call2.png";
+import youtube from "../assets/youtube3.png";
+import facebook from "../assets/Facebook.png";
 const ContactUs = () => {
   return (
     <>

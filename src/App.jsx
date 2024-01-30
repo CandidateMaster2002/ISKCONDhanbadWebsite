@@ -1,22 +1,22 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
+import Hero from "./components/Hero";
 import Category from "./components/Category/Category";
 import Category2 from "./components/Category/Category2";
 import Services from "./components/Services/Services";
-import Banner from "./components/Banner/Banner";
-import Partners from "./components/Partners/Partners.jsx";
-
+import Banner from "./components/Banner";
+import SocialMediaLinks from "./components/SocialMediaLinks.jsx";
+import { Outlet } from "react-router-dom";
 import headphone from "./assets/hero/headphone.png";
 import smartwatch2 from "./assets/category/smartwatch2-removebg-preview.png";
-import PrivacyPolicy from "./components/FormalitiesPages/PrivacyPolicy.jsx";
+import PrivacyPolicy from "../src/Pages/PrivacyPolicy.jsx";
 import Products from "./components/Products/Products";
-import Blogs from "./components/Blogs/Blogs";
-import Footer from "./components/Footer/Footer.jsx";
-import Popup from "./components/Popup/Popup.jsx";
+import Blogs from "./components/Blogs";
+import Footer from "./components/Footer.jsx";
+import Popup from "./components/Popup.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import TopmostBannerCarousel from "./components/TopmostBannerCarousel/TopmostBannerCarousel.jsx";
+import TopmostBannerCarousel from "./components/TopmostBannerCarousel.jsx";
 import DownFooter from "./components/DownFooter.jsx";
 
 const BannerData = {
@@ -62,20 +62,10 @@ const App = () => {
 
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
-      {/* <PrivacyPolicy/> */}
       <Navbar handleOrderPopup={handleOrderPopup} />
-      {/* <Hero handleOrderPopup={handleOrderPopup} /> */}
-      <TopmostBannerCarousel/>
-      <Partners />
-      <Category />
-      <Category2 />
-      <Services />
-      <Banner data={BannerData} />
-      <Products />
-      <Banner data={BannerData2} />
-      <Blogs />
+     <Outlet/>
       <Footer />
-<DownFooter/>
+      <DownFooter />
       {/* <Popup orderPopup={orderPopup} handleOrderPopup={handleOrderPopup} /> */}
     </div>
   );

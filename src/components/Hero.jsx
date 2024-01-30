@@ -1,10 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
-import Image1 from "../../assets/hero/headphone.png";
-import Image2 from "../../assets/category/vr.png";
-import Image3 from "../../assets/category/macbook.png";
-import Button from "../Shared/Button";
-import voice_altar from "../../assets/voice-altar.jpg"
+import Image1 from "../assets/hero/headphone.png";
+import Image2 from "../assets/category/vr.png";
+import Image3 from "../assets/category/macbook.png";
+import Button from "../components/Shared/Button"
+import voice_altar from "../assets/voice-altar.jpg"
 
 const HeroData = [
   {
