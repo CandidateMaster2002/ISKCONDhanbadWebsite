@@ -57,7 +57,7 @@ const App = () => {
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
       <RightNavbar/>
-      <Navbar2/>
+      <Navbar3/>
       {/* <DonateNavbar/> */}
      <Outlet/>
       <Footer />

@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       { path: "youth-empowerment", element: <YouthEmpowerment /> },
       {path:"dham-yatra",element:<DhamYatra/>},
       {path:"festivals",element:<Festivals/>},
-      {path:"temple_schedule",element:<TempleSchedule/>}
+      {path:"temple-schedule",element:<TempleSchedule/>}
     ],
   },
 ]);

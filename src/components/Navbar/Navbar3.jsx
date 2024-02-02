@@ -1,57 +1,136 @@
-import React from "react";
-import { IoMdSearch } from "react-icons/io";
-import { FaCaretDown, FaCartShopping } from "react-icons/fa6";
-import DarkMode from "./DarkMode";
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import React, { useState } from "react";
+import { FaBars, FaTimes, FaCaretDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { AboutDropdownLinks } from "../../InfoAndData";
-import { ActivitiesDropdownLinks } from "../../InfoAndData";
-// import { handleLanguageChange } from "../../InfoAndData";
+import { AboutDropdownLinks, ActivitiesDropdownLinks } from "../../InfoAndData";
 
+const Navbar2 = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const [activitiesDropdownOpen, setActivitiesDropdownOpen] = useState(false);
 
-const Navbar3 = () => {
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleAboutDropdown = () => {
+    setAboutDropdownOpen(!aboutDropdownOpen);
+  };
+
+  const toggleActivitiesDropdown = () => {
+    setActivitiesDropdownOpen(!activitiesDropdownOpen);
+  };
 
   return (
- <>
+    <div className="bg-white dark:bg-gray-900 dark:text-white fixed top-0 shadow-md duration-200 relative z-40">
+      <div className="py-4">
+        <div className="container flex justify-between items-center">
+          {/* Logo and Hamburger Menu */}
+          <div className="flex items-center gap-4">
+            <Link to="/">
+              <img
+                src="src\assets\iskcon-dhanbad-image.jpg"
+                alt="ISKCON Dhanbad"
+                className="text-primary font-semibold tracking-widest text-2xl uppercase sm:text-3xl max-h-14"
+              />
+            </Link>
 
-<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"/>
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-  </a>
-  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
-      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-  </div>
-  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-      <li>
-        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
-      </li>
-      <li>
-        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-      </li>
-      <li>
-        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-      </li>
-      <li>
-        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-      </li>
-    </ul>
-  </div>
-  </div>
-</nav>
-</>
+            {/* Hamburger Menu for Small Screens */}
+            <div className="lg:hidden cursor-pointer" onClick={toggleMenu}>
+              {isMenuOpen ? (
+                <FaTimes className="text-2xl" />
+              ) : (
+                <FaBars className="text-2xl" />
+              )}
+            </div>
+          </div>
+
+          {/* Navbar Links */}
+          <div className={`lg:flex items-center gap-4 ${isMenuOpen ? 'flex-col' : 'hidden'}`}>
+            <Link
+              to="/"
+              className="inline-block px-2 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200"
+            >
+              Home
+            </Link>
+
+            <div className="relative group">
+              <div
+                onClick={toggleAboutDropdown}
+                className="flex items-center gap-[2px] font-semibold text-gray-500 dark:hover:text-white py-2 cursor-pointer"
+              >
+                About
+                <span>
+                  <FaCaretDown className={`transform ${aboutDropdownOpen ? 'rotate-180' : 'rotate-0'} duration-300`} />
+                </span>
+              </div>
+
+              {/* Dropdown Links */}
+              {aboutDropdownOpen && (
+                <div className="absolute z-[9999] w-[200px] bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white mt-2">
+                  <ul className="space-y-2">
+                    {AboutDropdownLinks.map((data, index) => (
+                      <li key={index}>
+                        <Link
+                          to={data.link}
+                          className="text-gray-500 dark:hover:text-white duration-200 inline-block w-full p-2 hover:bg-primary/20 rounded-md font-semibold"
+                        >
+                          {data.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            <div className="relative group">
+              <div
+                onClick={toggleActivitiesDropdown}
+                className="flex items-center gap-[2px] font-semibold text-gray-500 dark:hover:text-white py-2 cursor-pointer"
+              >
+                Activities
+                <span>
+                  <FaCaretDown className={`transform ${activitiesDropdownOpen ? 'rotate-180' : 'rotate-0'} duration-300`} />
+                </span>
+              </div>
+
+              {/* Dropdown Links */}
+              {activitiesDropdownOpen && (
+                <div className="absolute z-[9999] w-[200px] bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white mt-2">
+                  <ul className="space-y-2">
+                    {ActivitiesDropdownLinks.map((data, index) => (
+                      <li key={index}>
+                        <Link
+                          to={data.link}
+                          className="text-gray-500 dark:hover:text-white duration-200 inline-block w-full p-2 hover:bg-primary/20 rounded-md font-semibold"
+                        >
+                          {data.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="/contact-us"
+              className="block py-2 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200"
+            >
+              Contact Us
+            </Link>
+
+            <Link
+              to="/festivals"
+              className="block py-2 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200"
+            >
+              Festivals
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default Navbar3;
-
-// overflow-hidden rounded-3xl min-h-[550px] sm:min-h-[650px] flex justify-center items-center
+export default Navbar2;
