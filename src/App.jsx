@@ -22,6 +22,7 @@ import DonateNavbar from "./components/DonateNavbar.jsx";
 import RightNavbar from "./components/Navbar/RightNavbar.jsx";
 import Navbar2 from "./components/Navbar/Navbar2.jsx"
 import Navbar3 from "./components/Navbar/Navbar3.jsx";
+import Navbar4 from "./components/Navbar/Navbar4.jsx";
 
 
 
@@ -57,7 +58,7 @@ const App = () => {
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
       <RightNavbar/>
-      <Navbar3/>
+   <Navbar4/>
       {/* <DonateNavbar/> */}
      <Outlet/>
       <Footer />
