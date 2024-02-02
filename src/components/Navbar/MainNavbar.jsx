@@ -12,6 +12,7 @@ import DarkMode from "./DarkMode";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import iskcondhanbadLogo from "../../assets/iskcon-dhanbad-image.jpg"
 
 
 const MainNavbar = () => {
@@ -201,7 +202,7 @@ const MainNavbar = () => {
             </g>{" "}
           </g>
         </svg>
-        <a href="#" className="flex items-center">
+        <a href="/donate.html" className="flex items-center">
           Donate
         </a>
       </Typography>
@@ -273,7 +274,7 @@ const MainNavbar = () => {
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900 ">
         <Link to="/">
           <img
-            src="src\assets\iskcon-dhanbad-image.jpg"
+            src={iskcondhanbadLogo}
             alt="ISKCON Dhanbad"
             className="text-primary font-semibold tracking-widest text-2xl uppercase sm:text-3xl max-h-32"
           />
