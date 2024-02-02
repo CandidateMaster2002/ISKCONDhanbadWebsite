@@ -25,6 +25,7 @@ import DhamYatra from "./Pages/DhamYatra.jsx";
 import Festivals from "./Pages/Festivals.jsx";
 import Faaltu from "./Pages/Faaltu.jsx";
 import TempleSchedule from "./Pages/TempleSchedule.jsx";
+import OurServices from "./Pages/OurServices.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,7 +48,8 @@ const router = createBrowserRouter([
       { path: "youth-empowerment", element: <YouthEmpowerment /> },
       {path:"dham-yatra",element:<DhamYatra/>},
       {path:"festivals",element:<Festivals/>},
-      {path:"temple-schedule",element:<TempleSchedule/>}
+      {path:"temple-schedule",element:<TempleSchedule/>},
+      {path:"our-services",element:<OurServices/>}
     ],
   },
 ]);

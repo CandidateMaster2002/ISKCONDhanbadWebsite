@@ -1,6 +1,9 @@
 import React from "react";
 import { ActivitiesLinks, AboutLinks } from "../InfoAndData.js";
 import { FaMobileAlt } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { SocialHandleLinks } from "../InfoAndData";
 // import { ActivitiesLinks } from "../InfoAndData";
 
 import {
@@ -10,23 +13,6 @@ import {
   FaLocationArrow,
 } from "react-icons/fa6";
 
-import { FiClock } from "react-icons/fi";
-
-// const AboutLinks = [
-//   {
-//     title: "About ISKCON",
-//     link: "/terms-and-conditions",
-//   },
-//   {
-//     title: "About ISKCON Founder",
-//     link: "/privacy-policy",
-//   },
-//   {
-//     title: "About ISKCON Dhanbad",
-//     link: "/refund-cancel",
-//   },
-// ];
-
 const Footer = () => {
   return (
     <div className="dark:bg-gray-950">
@@ -34,42 +20,40 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 pb-20 pt-5">
           {/* company details */}
           <div className="py-8 px-4">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-primary font-semibold tracking-widest text-2xl uppercase sm:text-3xl
 "
             >
               ISKCON Dhanbad
-            </a>
+            </Link>
             <p className="text-gray-600 dark:text-white/70  lg:pr-24 pt-3">
-             ISKCON is serving humanity since 56 years ,distributed 300+ crore meals around the world.
+              Serving since 56 years,ISKCON has distributed 100+ crore
+              scriptures and 300+ crore meals around the world.
             </p>
-            <p className="text-gray-600 mt-4">
-              Support us in our mission... 
-            </p>
-            <a
-              href="https://www.youtube.com/channel/UC1H-a1MKEFXRiFlGNLcy7gQ"
-              target="_blank"
+            <p className="text-gray-600 mt-4">Support us in our mission...</p>
+            <Link
+              to="donate"
               className="inline-block bg-primary/90 text-white py-2 px-4 mt-4 text-sm rounded-full"
             >
               DONATE Now !
-            </a>
+            </Link>
           </div>
 
           {/* Footer links */}
           <div className="col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10">
             <div className="py-8 px-4">
               <h1 className="text-xl font-bold sm:text-left mb-3">
-                <span> Our Activities </span>
+                <span> Our Services </span>
               </h1>
               <ul className="space-y-3">
                 {ActivitiesLinks.map((data, index) => (
-                  <li
-                    key={index}
-                    className="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300"
-                  >
-                    <span> {data.name}</span>
-                  </li>
+                  <Link to={data.link} key={index}>
+                    <li className="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">
+                      <span>{data.name}</span>
+                    </li>{" "}
+                    <br />
+                  </Link>
                 ))}
               </ul>
             </div>
@@ -81,12 +65,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {AboutLinks.map((data, index) => (
                   <li key={index}>
-                    <a
-                      href={data.link}
+                    <Link
+                      to={data.link}
                       className="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300"
                     >
                       {data.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -105,19 +89,26 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-3 mt-6">
                   <FaMobileAlt />
-                  <p>+91 9903013399</p>
+                  <p>+919903013399</p>
                 </div>
 
                 {/* social links */}
                 <div className="flex items-center gap-3 mt-6">
-                  <a href="#">
+                  <a href={SocialHandleLinks.youtube}  target="_blank"
+            rel="noopener noreferrer">
+                    <FaYoutube className="text-3xl hover:text-primary duration-300" />
+                  </a>
+                  <a href={SocialHandleLinks.linkedin}  target="_blank"
+            rel="noopener noreferrer">
+                    <FaLinkedin className="text-3xl hover:text-primary duration-200" />
+                  </a>
+                  <a href={SocialHandleLinks.instagram}  target="_blank"
+            rel="noopener noreferrer">
                     <FaInstagram className="text-3xl hover:text-primary duration-300" />
                   </a>
-                  <a href="#">
+                  <a href={SocialHandleLinks.facebook}  target="_blank"
+            rel="noopener noreferrer">
                     <FaFacebook className="text-3xl hover:text-primary duration-200" />
-                  </a>
-                  <a href="#">
-                    <FaLinkedin className="text-3xl hover:text-primary duration-200" />
                   </a>
                 </div>
               </div>

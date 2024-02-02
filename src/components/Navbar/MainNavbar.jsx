@@ -63,9 +63,9 @@ const MainNavbar = () => {
           </g>
         </svg>
 
-        <a href="#" className="flex items-center">
-          Our Activities
-        </a>
+        <Link to="our-services" className="flex items-center">
+          Our Services
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -146,9 +146,9 @@ const MainNavbar = () => {
             ></path>{" "}
           </g>
         </svg>
-        <a href="#" className="flex items-center">
+        <Link to="temple-schedule" className="flex items-center">
           Temple Schedule
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -202,9 +202,9 @@ const MainNavbar = () => {
             </g>{" "}
           </g>
         </svg>
-        <a href="/donate.html" className="flex items-center">
+        <Link to="donate" className="flex items-center">
           Donate
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -262,9 +262,9 @@ const MainNavbar = () => {
             ></path>
           </g>
         </svg>
-        <a href="#" className="flex items-center">
+        <Link to="contact-us" className="flex items-center">
           Contact
-        </a>
+        </Link>
       </Typography>
     </ul>
   );

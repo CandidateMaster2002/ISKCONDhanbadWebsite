@@ -7,6 +7,7 @@ import instagram from "../assets/Instagram.webp";
 import call from "../assets/call2.png";
 import youtube from "../assets/youtube3.png";
 import facebook from "../assets/Facebook.png";
+import { SocialHandleLinks } from "../InfoAndData";
 const ContactUs = () => {
   return (
     <>
@@ -188,26 +189,50 @@ const ContactUs = () => {
                       <p class="mb-2 font-bold dark:text-white">Social Media</p>
 
                       <div className="grid grid-cols-2 gap-4">
-                        <img
-                          src={whatsapp}
-                          alt="brand"
-                          className="w-[80px] dark:invert"
-                        />
-                        <img
-                          src={youtube}
-                          alt="brand"
-                          className="w-[80px] dark:invert"
-                        />
-                        <img
-                          src={instagram}
-                          alt="brand"
-                          className="w-[80px] dark:invert"
-                        />
-                        <img
-                          src={facebook}
-                          alt="brand"
-                          className="w-[80px] dark:invert"
-                        />
+                        <a
+                          href={SocialHandleLinks.whatsapp}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={whatsapp}
+                            alt="brand"
+                            className="w-[80px] dark:invert"
+                          />
+                        </a>
+                        <a
+                          href={SocialHandleLinks.youtube}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={youtube}
+                            alt="brand"
+                            className="w-[80px] dark:invert"
+                          />
+                        </a>
+                        <a
+                          href={SocialHandleLinks.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={instagram}
+                            alt="brand"
+                            className="w-[80px] dark:invert"
+                          />
+                        </a>
+                        <a
+                          href={SocialHandleLinks.facebook}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={facebook}
+                            alt="brand"
+                            className="w-[80px] dark:invert"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
