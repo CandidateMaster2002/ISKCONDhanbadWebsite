@@ -263,7 +263,7 @@ const MainNavbar = () => {
           </g>
         </svg>
         <Link to="contact-us" className="flex items-center">
-          Contact
+          Contact Us
         </Link>
       </Typography>
     </ul>

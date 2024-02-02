@@ -28,8 +28,8 @@ const Home = () => {
     
     
      {/* <Hero handleOrderPopup={handleOrderPopup} /> */}
-      <Services />
       <TopmostBannerCarousel />
+      <Services />
       <SocialMediaLinks />
       <DonationSection/>
       {/* <Category /> */}
