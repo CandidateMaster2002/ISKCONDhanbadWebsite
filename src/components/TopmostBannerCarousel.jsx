@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { Carousel, initMDB } from "mdb-ui-kit";
 import { useState } from "react";
+import Jbs from "../assets/jbs.jpg";
+import VoiceAltar from "../assets/voice-altar2.png"
+import GaurNitai from "../assets/gaur-nitai2.png"
 
 const TopmostBannerCarousel = () => {
   const [showGreenDiv, setShowGreenDiv] = useState(true);
@@ -33,9 +36,7 @@ const TopmostBannerCarousel = () => {
   };
 
   const carouselImages = [
-    "src/assets/jbs.jpg",
-    "src/assets/voice-altar2.png",
-    "src/assets/gaur-nitai2.png",
+    Jbs,VoiceAltar,GaurNitai
   ];
 
   return (
