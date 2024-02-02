@@ -33,20 +33,20 @@ const BlogData = [
 ];
 const Blogs = () => {
   return (
-    <div className="my-12">
+    <div className="my-12 dark:bg-black">
       <div className="container">
         {/* Header section */}
         <Heading title="ISKCON Dhanbad Highlights"/>
 
         {/* Blog section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 gap-y-8 sm:gap-4 md:gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 gap-y-8 sm:gap-4 md:gap-7 dark:bg-black">
           {/* Blog card */}
           {BlogData.map((data) => (
             <div
               data-aos="fade-up"
               data-aos-delay={data.aosDelay}
               key={data.title}
-              className="bg-white dark:bg-gray-900"
+              className="bg-white dark:text-black"
             >
               {/* image section */}
               <div className="overflow-hidden rounded-2xl mb-2">

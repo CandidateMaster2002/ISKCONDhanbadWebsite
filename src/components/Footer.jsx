@@ -1,5 +1,8 @@
 import React from "react";
+import { ActivitiesLinks, AboutLinks } from "../InfoAndData.js";
 import { FaMobileAlt } from "react-icons/fa";
+// import { ActivitiesLinks } from "../InfoAndData";
+
 import {
   FaFacebook,
   FaInstagram,
@@ -9,30 +12,20 @@ import {
 
 import { FiClock } from "react-icons/fi";
 
-const DailySchedule = [
-  { timing: "04:00-04:15", activity: "Sikshaskatam prayers" },
-  { timing: "04:15-06:15", activity: "Mantra meditation" },
-  { timing: "06:15-07:00", activity: "Mangal arti" },
-  { timing: "07:00-08:15", activity: "Srimad Bhagvatam discourse" },
-  { timing: "09:00-01:00 PM", activity: "Darshan open" },
-  { timing: "01:00-04:00 PM", activity: "Darshan closes" },
-  { timing: "04:00-08:30 PM", activity: "Darshan opens" },
-];
-
-const FooterLinks = [
-  {
-    title: "Terms and Conditions",
-    link: "/terms-and-conditions",
-  },
-  {
-    title: "Privacy Policy",
-    link: "/privacy-policy",
-  },
-  {
-    title: "Refund and Cancellation Policy",
-    link: "/refund-cancel",
-  }
-];
+// const AboutLinks = [
+//   {
+//     title: "About ISKCON",
+//     link: "/terms-and-conditions",
+//   },
+//   {
+//     title: "About ISKCON Founder",
+//     link: "/privacy-policy",
+//   },
+//   {
+//     title: "About ISKCON Dhanbad",
+//     link: "/refund-cancel",
+//   },
+// ];
 
 const Footer = () => {
   return (
@@ -46,21 +39,20 @@ const Footer = () => {
               className="text-primary font-semibold tracking-widest text-2xl uppercase sm:text-3xl
 "
             >
-              Eshop
+              ISKCON Dhanbad
             </a>
             <p className="text-gray-600 dark:text-white/70  lg:pr-24 pt-3">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
-              alias cum
+             ISKCON is serving humanity since 56 years ,distributed 300+ crore meals around the world.
             </p>
-            <p className="text-gray-500 mt-4">
-              Made with 💖 by The Coding Journey
+            <p className="text-gray-600 mt-4">
+              Support us in our mission... 
             </p>
             <a
               href="https://www.youtube.com/channel/UC1H-a1MKEFXRiFlGNLcy7gQ"
               target="_blank"
               className="inline-block bg-primary/90 text-white py-2 px-4 mt-4 text-sm rounded-full"
             >
-              Visit our YouTube Channel
+              DONATE Now !
             </a>
           </div>
 
@@ -68,15 +60,15 @@ const Footer = () => {
           <div className="col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10">
             <div className="py-8 px-4">
               <h1 className="text-xl font-bold sm:text-left mb-3">
-             <span > <FiClock /> Temple Timings </span>
+                <span> Our Activities </span>
               </h1>
               <ul className="space-y-3">
-                {DailySchedule.map((data, index) => (
-                  <li key={index} className="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">
-                  <span> {data.timing}:
-                      {data.activity}</span>
-                     
-                 
+                {ActivitiesLinks.map((data, index) => (
+                  <li
+                    key={index}
+                    className="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300"
+                  >
+                    <span> {data.name}</span>
                   </li>
                 ))}
               </ul>
@@ -87,13 +79,13 @@ const Footer = () => {
                 Quick Links
               </h1>
               <ul className="space-y-3">
-                {FooterLinks.map((data, index) => (
+                {AboutLinks.map((data, index) => (
                   <li key={index}>
                     <a
                       href={data.link}
                       className="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300"
                     >
-                      {data.title}
+                      {data.name}
                     </a>
                   </li>
                 ))}
@@ -106,9 +98,10 @@ const Footer = () => {
               <div>
                 <div className="flex items-center gap-3">
                   <FaLocationArrow />
-                  <p>21, Dhruv Singh Colony,
-Rahargora, Dhaiya, Dhanbad,
-Jharkhand.</p>
+                  <p>
+                    21, Dhruv Singh Colony, Rahargora, Dhaiya, Dhanbad,
+                    Jharkhand.
+                  </p>
                 </div>
                 <div className="flex items-center gap-3 mt-6">
                   <FaMobileAlt />
