@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar.jsx";
 import Hero from "./components/Hero";
 import Category from "./components/Category/Category";
 import Category2 from "./components/Category/Category2";
@@ -18,18 +18,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import TopmostBannerCarousel from "./components/TopmostBannerCarousel.jsx";
 import DownFooter from "./components/DownFooter.jsx";
+import DonateNavbar from "./components/DonateNavbar.jsx";
+import RightNavbar from "./components/Navbar/RightNavbar.jsx";
+import Navbar2 from "./components/Navbar/Navbar2.jsx"
+import Navbar3 from "./components/Navbar/Navbar3.jsx";
 
-const BannerData = {
-  discount: "30% OFF",
-  title: "Fine Smile",
-  date: "10 Jan to 28 Jan",
-  image: headphone,
-  title2: "Air Solo Bass",
-  title3: "Winter Sale",
-  title4:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque reiciendis",
-  bgColor: "#f42c37",
-};
+
 
 const BannerData2 = {
   discount: "30% OFF",
@@ -62,7 +56,9 @@ const App = () => {
 
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
-      <Navbar handleOrderPopup={handleOrderPopup} />
+      <RightNavbar/>
+      <Navbar2/>
+      {/* <DonateNavbar/> */}
      <Outlet/>
       <Footer />
       <DownFooter />

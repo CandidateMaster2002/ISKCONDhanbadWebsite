@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TopmostBannerCarousel from "./components/TopmostBannerCarousel.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
+import 'flowbite';
 import AboutIskcon from "./Pages/AboutIskcon.jsx";
 import AboutISKCONDhanbad from "./Pages/AboutISKCONDhanbad.jsx";
 import AboutISKCONFounder from "./Pages/AboutISKCONFounder.jsx";
@@ -23,8 +23,8 @@ import VillagePreaching from "./Pages/VillagePreaching.jsx";
 import YouthEmpowerment from "./Pages/YouthEmpowerment.jsx";
 import DhamYatra from "./Pages/DhamYatra.jsx";
 import Festivals from "./Pages/Festivals.jsx";
-
-
+import Faaltu from "./Pages/Faaltu.jsx";
+import TempleSchedule from "./Pages/TempleSchedule.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,7 +37,8 @@ const router = createBrowserRouter([
       { path: "book-distribution", element: <BookDistribution /> },
       { path: "contact-us", element: <ContactUs /> },
       { path: "dhanbad-tribal-care", element: <DhanbadTribalCare /> },
-      { path: "donate", element: <Donate /> },
+      { path: "donate", element: <Donate/> },
+      {path:"Faaltu",element:<Faaltu/>},
       { path: "girls-empowerment", element: <GirlsEmpowerment /> },
       { path: "privacy-policy", element: <PrivacyPolicy /> },
       { path: "refund-cancel", element: <RefundCancel /> },
@@ -45,7 +46,8 @@ const router = createBrowserRouter([
       { path: "village-preaching", element: <VillagePreaching /> },
       { path: "youth-empowerment", element: <YouthEmpowerment /> },
       {path:"dham-yatra",element:<DhamYatra/>},
-      {path:"festivals",element:<Festivals/>}
+      {path:"festivals",element:<Festivals/>},
+      {path:"temple_schedule",element:<TempleSchedule/>}
     ],
   },
 ]);

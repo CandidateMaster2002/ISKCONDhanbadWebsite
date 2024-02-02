@@ -26,12 +26,13 @@ const Banner = ({ data }) => {
           </div>
           {/* second col */}
           <div data-aos="zoom-in" className="h-full flex items-center">
-            <img
-              src={data.image}
-              alt=""
-              className="scale-125 w-[250px] md:w-[340px] mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,.6)] object-cover"
-            />
-          </div>
+  <img
+    src={data.image}
+    alt=""
+    className="scale-125 w-[180px] md:w-[340px] mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,.6)] object-cover"
+  />
+</div>
+
           {/* third col */}
           <div className="flex flex-col justify-center gap-4 p-6 sm:p-8">
             <p data-aos="zoom-out" className="font-bold text-xl">

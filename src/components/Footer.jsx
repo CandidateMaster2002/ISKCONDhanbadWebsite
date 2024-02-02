@@ -7,18 +7,30 @@ import {
   FaLocationArrow,
 } from "react-icons/fa6";
 
+import { FiClock } from "react-icons/fi";
+
+const DailySchedule = [
+  { timing: "04:00-04:15", activity: "Sikshaskatam prayers" },
+  { timing: "04:15-06:15", activity: "Mantra meditation" },
+  { timing: "06:15-07:00", activity: "Mangal arti" },
+  { timing: "07:00-08:15", activity: "Srimad Bhagvatam discourse" },
+  { timing: "09:00-01:00 PM", activity: "Darshan open" },
+  { timing: "01:00-04:00 PM", activity: "Darshan closes" },
+  { timing: "04:00-08:30 PM", activity: "Darshan opens" },
+];
+
 const FooterLinks = [
   {
     title: "Terms and Conditions",
-    link: "/#",
+    link: "/terms-and-conditions",
   },
   {
     title: "Privacy Policy",
-    link: "/#about",
+    link: "/privacy-policy",
   },
   {
     title: "Refund and Cancellation Policy",
-    link: "/#contact",
+    link: "/refund-cancel",
   }
 ];
 
@@ -56,17 +68,15 @@ const Footer = () => {
           <div className="col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10">
             <div className="py-8 px-4">
               <h1 className="text-xl font-bold sm:text-left mb-3">
-                Important Links
+             <span > <FiClock /> Temple Timings </span>
               </h1>
               <ul className="space-y-3">
-                {FooterLinks.map((data, index) => (
-                  <li key={index}>
-                    <a
-                      href={data.link}
-                      className="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300"
-                    >
-                      {data.title}
-                    </a>
+                {DailySchedule.map((data, index) => (
+                  <li key={index} className="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">
+                  <span> {data.timing}:
+                      {data.activity}</span>
+                     
+                 
                   </li>
                 ))}
               </ul>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const DownFooter = () => {
   return (
     <footer className="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
@@ -8,15 +8,15 @@ const DownFooter = () => {
         Copyright © 2024 ISKCON Dhanbad. All Rights Reserved.
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-          <li>
-            <a href="#" className="hover:underline me-4 md:me-6">Terms & Conditions</a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline me-4 md:me-6">Refund & Cancellation Policy</a>
-          </li>
+        <li>
+    <Link to="terms-and-conditions" className="hover:underline me-4 md:me-6">Terms & Conditions</Link>
+  </li>
+  <li>
+    <Link to="privacy-policy" className="hover:underline me-4 md:me-6">Privacy Policy</Link>
+  </li>
+  <li>
+    <Link to="refund-cancel" className="hover:underline me-4 md:me-6">Refund & Cancellation Policy</Link>
+  </li>
         </ul>
       </div>
     </footer>
