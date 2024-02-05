@@ -25,7 +25,7 @@ const BlogData = [
   {
     title: "Upcoming ISKCON Meditation Center",
     subtitle:
-      "ISKCON Meditation Center under development in Jagjivan Nagar. Click <a href='#'>here</a> to support",
+      "ISKCON Meditation Center under development in Jagjivan Nagar.",
     published: "Jan 20, 2024 by Sabir",
     image: JagJivanNagar,
     aosDelay: "400",
@@ -61,7 +61,8 @@ const Blogs = () => {
                 {/* <p className="text-xs text-gray-500">{data.published}</p> */}
                 <p className="font-bold line-clamp-2">{data.title}</p>
                 <p className="line-clamp-3 text-sm text-gray-600 dark:text-gray-400">
-                  {data.subtitle}
+                  {data.subtitle} 
+                  {/* Click <a href="/donate">here</a> to support. */}
                 </p>
               </div>
             </div>
