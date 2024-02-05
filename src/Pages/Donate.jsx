@@ -17,8 +17,8 @@ const Donate = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="w-full sm:max-w-md bg-white p-8 shadow-md rounded-md">
+    <div className="min-h-screen flex items-center justify-center dark:bg-gray-950">
+      <div className="w-full sm:max-w-md p-8 shadow-md rounded-md">
         <h2 className="text-3xl font-semibold mb-4">Donate to Our Cause</h2>
 
         {/* QR Code */}

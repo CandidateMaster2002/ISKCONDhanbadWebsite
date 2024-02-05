@@ -5,6 +5,7 @@ import call from "../assets/call2.png";
 import youtube from "../assets/youtube3.png";
 import facebook from "../assets/Facebook.png";
 import { SocialHandleLinks, handleCallClick } from "../InfoAndData";
+import { WhatsappSvg } from "../Svg";
 
 const SocialMediaLinks = () => {
   return (
@@ -14,6 +15,8 @@ const SocialMediaLinks = () => {
     >
       <div className="container">
         <div className="grid grid-cols-5 gap-3 place-items-center opacity-100">
+
+        {/* <div dangerouslySetInnerHTML={{ __html: WhatsappSvg }} /> */}
           <a
             href={SocialHandleLinks.whatsapp}
             target="_blank"

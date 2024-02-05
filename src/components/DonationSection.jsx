@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const DonationSection = () => {
   return (
-    <div className="text-center mt-8 bg-red-50">
+    <div className="conatiner dark:bg-gray-950 text-center mt-8 bg-red-50">
       <h1 className="text-4xl font-extrabold text-indigo-700 mb-4 animate__animated animate__fadeIn animate__delay-1s">
         <Link to="donate">
           <button

@@ -2,7 +2,7 @@ import React from 'react';
 
 const DonateNavbar = () => {
   return (
-    <nav className="bg-white dark:bg-gray-900 dark:text-white fixed w-full top-0 z-50 shadow-md">
+    <nav className="bg-white dark:bg-gray-950 dark:text-white fixed w-full top-0 z-50 shadow-md">
       <div className="container flex items-center justify-between py-4">
         {/* Logo or other navigation items */}
         {/* <div>

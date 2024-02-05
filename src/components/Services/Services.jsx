@@ -52,7 +52,7 @@ const Services = () => {
 
   const { t } = useTranslation();
   return (
-    <div className="dark:bg-black">
+    <div className="dark:bg-gray-950">
  <div className="container my-14 md:my-20">
   <h1 className="text-2xl font-bold mb-6 text-center">ISKCON Dhanbad in 2023</h1>
   <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8">

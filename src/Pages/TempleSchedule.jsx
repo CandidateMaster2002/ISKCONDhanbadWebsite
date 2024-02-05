@@ -12,7 +12,7 @@ const TimeAndActivity = [
 
 const TempleSchedule = () => {
   return (
-    <section className="bg-white dark:bg-gray-900 antialiased">
+    <section className="dark:bg-gray-950 antialiased">
       <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-red-900 dark:text-white">
@@ -36,7 +36,7 @@ const TempleSchedule = () => {
                 <p className="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   {time}
                 </p>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                <h3 className="text-lg font-semibold text-gray-950 dark:text-white">
                   {activity}
                 </h3>
               </div>

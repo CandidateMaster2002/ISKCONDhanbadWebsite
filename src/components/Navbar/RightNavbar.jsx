@@ -25,7 +25,7 @@ const RightNavbar = () => {
 
 
   return (
-    <div className="bg-red-500 dark:bg-gray-900 dark:text-white fixed top-0  shadow-md duration-200 relative z-40">
+    <div className="bg-red-500 dark:bg-gray-950 dark:text-white fixed top-0  shadow-md duration-200 relative z-40">
     <div className="py-1">
       <div className="container flex justify-between items-center">
         <div className="flex justify-between items-center gap-1 ml-auto"> {/* Use ml-auto here */}

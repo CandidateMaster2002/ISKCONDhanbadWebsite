@@ -33,23 +33,23 @@ const BlogData = [
 ];
 const Blogs = () => {
   return (
-    <div className="my-12 dark:bg-black">
+    <div className="my-12 dark:bg-gray-950">
       <div className="container">
         {/* Header section */}
         <Heading title="ISKCON Dhanbad Highlights"/>
 
         {/* Blog section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 gap-y-8 sm:gap-4 md:gap-7 dark:bg-black">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 gap-y-8 sm:gap-4 md:gap-7 dark:bg-gray-950">
           {/* Blog card */}
           {BlogData.map((data) => (
             <div
               data-aos="fade-up"
               data-aos-delay={data.aosDelay}
               key={data.title}
-              className="bg-white dark:text-black"
+              className=""
             >
               {/* image section */}
-              <div className="overflow-hidden rounded-2xl mb-2">
+              <div className="overflow-hidden rounded-2xl mb-2 dark:bg-gray-950">
                 <img
                   src={data.image}
                   alt=""
@@ -57,7 +57,7 @@ const Blogs = () => {
                 />
               </div>
               {/* content section */}
-              <div className="space-y-2">
+              <div className="space-y-2 dark:bg-gray-950">
                 {/* <p className="text-xs text-gray-500">{data.published}</p> */}
                 <p className="font-bold line-clamp-2">{data.title}</p>
                 <p className="line-clamp-3 text-sm text-gray-600 dark:text-gray-400">

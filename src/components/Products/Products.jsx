@@ -9,7 +9,7 @@ import { ProductsData } from "../../InfoAndData";
 const Products = () => {
   return (
     <div>
-      <div className="container dark:bg-black">
+      <div className="container dark:bg-gray-950">
         {/* Header section */}
         <Heading title="Our Services"/>
         {/* Body section */}

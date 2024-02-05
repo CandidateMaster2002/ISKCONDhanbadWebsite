@@ -54,7 +54,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-black dark:text-white duration-200 overflow-hidden">
+    <div className="dark:bg-gray-950 dark:text-white duration-200 overflow-hidden">
       <RightNavbar/>
    <MainNavbar/>
       {/* <DonateNavbar/> */}

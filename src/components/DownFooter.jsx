@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const DownFooter = () => {
   return (
-    <footer className="bg-white rounded-lg shadow m-4 dark:bg-black dark:text-white">
-      <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <footer className="dark:bg-gray-950">
+      <div className="container w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-500 sm:text-center ">
         Copyright © 2024 ISKCON Dhanbad. All Rights Reserved.
         </span>
