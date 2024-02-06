@@ -12,12 +12,22 @@ import DarkMode from "./DarkMode";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import iskcondhanbadLogo from "../../assets/iskcon-dhanbad-image.jpg"
+import iskcondhanbadLogo from "../../assets/iskcon-dhanbad-image.jpg";
 // import {OurServicesSvg,TempleScheduleSvg,DonateSvg,ContactUsSvg} from "../../Svg";
-import { OurServicesSvg,TempleScheduleSvg,DonateSvg,ContactUsSvg } from "../../Svg";
+import {
+  OurServicesSvg,
+  TempleScheduleSvg,
+  DonateSvg,
+  ContactUsSvg,
+} from "../../Svg";
 
 const MainNavbar = () => {
   const [openNav, setOpenNav] = React.useState(false);
+  const [mode, setMode] = React.useState(localStorage.getItem("theme"));
+
+  React.useEffect(() => {
+    setMode(localStorage.getItem("theme"));
+  }, [localStorage.getItem("theme")]);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -34,10 +44,9 @@ const MainNavbar = () => {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
+        <div dangerouslySetInnerHTML={{ __html: OurServicesSvg }} />
 
-<div dangerouslySetInnerHTML={{ __html: OurServicesSvg }} />
-      
-      {/* <svg
+        {/* <svg
 fill="green"
 height="40"
 width="40"
@@ -67,7 +76,6 @@ xml:space="preserve"
 </g>
 </svg> */}
 
-
         <Link to="our-services" className="flex items-center">
           Our Services
         </Link>
@@ -78,7 +86,7 @@ xml:space="preserve"
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
-       <div dangerouslySetInnerHTML={{ __html: TempleScheduleSvg }} />
+        <div dangerouslySetInnerHTML={{ __html: TempleScheduleSvg }} />
         <Link to="temple-schedule" className="flex items-center">
           Temple Schedule
         </Link>
@@ -100,7 +108,7 @@ xml:space="preserve"
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
-         <div dangerouslySetInnerHTML={{ __html: ContactUsSvg }} />
+        <div dangerouslySetInnerHTML={{ __html: ContactUsSvg }} />
         <Link to="contact-us" className="flex items-center">
           Contact Us
         </Link>
@@ -119,7 +127,7 @@ xml:space="preserve"
           />
         </Link>
         <div className="hidden lg:block">{navList}</div>
-     
+
         <IconButton
           variant="text"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden text-black"
@@ -129,10 +137,10 @@ xml:space="preserve"
           {openNav ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
+              fill="#FF0000"
               className="h-6 w-6"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="#FF0000"
               strokeWidth={2}
             >
               <path
@@ -145,8 +153,8 @@ xml:space="preserve"
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
+              fill="red"
+              stroke={mode === "dark" ? "#FFFFFF" : "#000000"}
               strokeWidth={2}
             >
               <path
