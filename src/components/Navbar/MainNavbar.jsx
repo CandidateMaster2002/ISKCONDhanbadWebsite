@@ -154,7 +154,7 @@ xml:space="preserve"
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
               fill="red"
-              stroke={mode === "dark" ? "#FFFFFF" : "#000000"}
+              stroke="#333333"
               strokeWidth={2}
             >
               <path
