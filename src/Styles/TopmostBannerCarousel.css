@@ -1,4 +1,5 @@
 .carousel-image {
-  height: 400px; /* Set the desired height for all images */
-  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  height: 100%; /* Set the desired height for all images */
+  width: 10vw;
+  object-fit: contain;
 }

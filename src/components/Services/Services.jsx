@@ -1,33 +1,34 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import holybook from "../../assets/books.jpg";
 import socialmedia from "../../assets/socialmediamobile.jpg";
 import festival from "../../assets/diwalilamps.jpg";
 import indianfood from "../../assets/deliciousindianfood.jpg";
+import { useSpring, animated } from "react-spring";
 
 const ServiceData = [
   {
     id: 1,
     icon: indianfood,
-    stats: "25K+",
+    stats: 25000,
     title: "People Served Free Prasad",
   },
   {
     id: 2,
     icon: festival,
-    stats: "10+",
+    stats: 10,
     title: "Grand Festivals celebrated",
   },
   {
     id: 3,
     icon: holybook,
-    stats: "4200+",
+    stats: 4200,
     title: "Holy Books distributed",
   },
   {
     id: 4,
     icon: socialmedia,
-    stats: "500K+",
+    stats: 5000000,
     title: "reach on Social Media",
   },
 ];
@@ -51,6 +52,16 @@ const Services = () => {
     setIconHeight(`${maxHeight}px`);
   }, []);
 
+  function Number({ n }) {
+    const { number } = useSpring({
+      from: { number: 0 },
+      number: n,
+      delay: 200,
+      config: { mass: 1, tension: 20, friction: 10 },
+    });
+    return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
+  }
+
   return (
     <div className="dark:bg-gray-950">
       <div className="container my-14 md:my-20">
@@ -67,9 +78,14 @@ const Services = () => {
                 className="rounded-full h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 text-primary"
               />
               <div>
-                <h1 id={`stats-${data.id}`} className="text-xl md:text-2xl font-bold mb-1">
-                  {data.stats}
+                <h1
+                  id={`stats-${data.id}`}
+                  className="text-xl md:text-2xl font-bold mb-1 flex items-center"
+                >
+                  <Number n={data.stats}/>
+                  <span className="ml-1">+</span>
                 </h1>
+
                 <h1
                   id={`title-${data.id}`}
                   className="text-base md:text-lg font-bold"

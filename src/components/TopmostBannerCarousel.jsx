@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { Carousel, initMDB } from "mdb-ui-kit";
 import { useState } from "react";
 import Jbs from "../assets/jbs.jpg";
-import VoiceAltar from "../assets/voice-altar2.png"
-import GaurNitai from "../assets/gaur-nitai2.png"
+import VoiceAltar from "../assets/voice-altar2.png";
+import GaurNitai from "../assets/gaur-nitai2.png";
 import "../Styles/TopmostBannerCarousel.css";
 
 const TopmostBannerCarousel = () => {
@@ -36,9 +36,7 @@ const TopmostBannerCarousel = () => {
     setActiveSlide((prevSlide) => (prevSlide + 1) % 3);
   };
 
-  const carouselImages = [
-    Jbs,VoiceAltar,GaurNitai
-  ];
+  const carouselImages = [Jbs, VoiceAltar, GaurNitai];
 
   return (
     <div
