@@ -10,6 +10,11 @@ import {
   ContactUsSvg,
 } from "../../Svg";
 
+import ContactUs from "../../assets/contact-removebg-preview.png";
+import Donate from "../../assets/3d-render-hand-put-golden-coin-into-piggy-bank-removebg-preview (1).png";
+import Clock from "../../assets/clock-removebg-preview.png";
+import Services from "../../assets/servicemic-removebg-preview.png"
+
 const MainNavbar = () => {
   const [openNav, setOpenNav] = React.useState(false);
 
@@ -21,7 +26,7 @@ const MainNavbar = () => {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
-        <div dangerouslySetInnerHTML={{ __html: OurServicesSvg }} />
+       <img src={Services} alt="Contact Us" className="w-10 h-10" />
 
         <Link to="our-services" className="flex items-center">
           Our Services
@@ -33,7 +38,7 @@ const MainNavbar = () => {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
-        <div dangerouslySetInnerHTML={{ __html: TempleScheduleSvg }} />
+      <img src={Clock} alt="Contact Us" className="w-10 h-10" />
         <Link to="temple-schedule" className="flex items-center">
           Temple Schedule
         </Link>
@@ -44,7 +49,7 @@ const MainNavbar = () => {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
-        <div dangerouslySetInnerHTML={{ __html: DonateSvg }} />
+        <img src={Donate} alt="Contact Us" className="w-10 h-10" />
         <Link to="donate" className="flex items-center">
           Donate
         </Link>
@@ -55,7 +60,7 @@ const MainNavbar = () => {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
-        <div dangerouslySetInnerHTML={{ __html: ContactUsSvg }} />
+        <img src={ContactUs} alt="Contact Us" className="w-10 h-10" />
         <Link to="contact-us" className="flex items-center">
           Contact Us
         </Link>

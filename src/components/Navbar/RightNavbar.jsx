@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
-// import { useTranslation } from "react-i18next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faFacebook,
+  faInstagram,
+  faWhatsapp,
+  faYoutube,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import DarkMode from "./DarkMode";
 import i18n from "../../i18n";
-
-// const { i18n } = useTranslation();
 
 const handleLanguageChange = (selectedLanguage, setLanguage) => {
   localStorage.setItem("language", selectedLanguage);
@@ -25,13 +31,55 @@ const RightNavbar = () => {
   }, [localStorage.getItem("language")]);
 
   return (
-    <div className="bg-red-500 dark:bg-gray-950 dark:text-white fixed top-0  shadow-md duration-200 relative z-40">
+    <div className="bg-gray-200 dark:bg-gray-950 dark:text-white fixed top-0 shadow-md duration-200 relative z-40">
       <div className="py-1">
         <div className="container flex justify-between items-center">
-          <div className="flex justify-between items-center gap-1 ml-auto">
-            {" "}
-            {/* Use ml-auto here */}
+          {/* Social Media Icons */}
+          <div className="flex gap-2">
+            <a href="#" className="text-white">
+              <FontAwesomeIcon
+                icon={faTwitter}
+                style={{ color: "#1DA1F2", fontSize: "1.8em" }}
+              />
+            </a>
+            <a href="#" className="text-white">
+              <FontAwesomeIcon
+                icon={faFacebook}
+                style={{ color: "blue", fontSize: "1.8em" }}
+              />
+            </a>
+            <a href="#" className="text-white">
+              <FontAwesomeIcon
+                icon={faInstagram}
+                style={{ color: "#E1306C", fontSize: "1.8em" }}
+              />
+            </a>
+            <a href="#" className="text-white">
+              <FontAwesomeIcon
+                icon={faWhatsapp}
+                style={{ color: "#25D366", fontSize: "1.8em" }}
+              />
+            </a>
+            <a href="#" className="text-white">
+              <FontAwesomeIcon
+                icon={faYoutube}
+                style={{ color: "#FF0000", fontSize: "1.8em" }}
+              />
+            </a>
+            <a href="#" className="text-white">
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                style={{ color: "#0077b9", fontSize: "1.8em" }}
+              />
+            </a>
+          </div>
+          {/* Language Buttons and Dark Mode section */}
+          <div className="flex justify-end items-center gap-1">
+            {/* Language Buttons */}
             <div>
+              {/* <a href="#" className="text-white">
+                <FontAwesomeIcon icon={faPhone} />
+              </a> */}
               <button
                 onClick={() => handleLanguageChange("en", setLanguage)}
                 className={`${
@@ -39,6 +87,7 @@ const RightNavbar = () => {
                     ? "bg-blue-500 text-white"
                     : "bg-gray-200 text-gray-700"
                 } px-1 py-2 rounded mr-2`}
+                style={{ fontSize: "0.6em" }}
               >
                 ENG
               </button>
@@ -49,6 +98,7 @@ const RightNavbar = () => {
                     ? "bg-blue-500 text-white"
                     : "bg-gray-200 text-gray-700"
                 } px-1 py-2 rounded`}
+                style={{ fontSize: "0.6em" }}
               >
                 हिंदी
               </button>

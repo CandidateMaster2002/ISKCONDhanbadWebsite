@@ -23,7 +23,6 @@ import RightNavbar from "./components/Navbar/RightNavbar.jsx";
 import MainNavbar from "./components/Navbar/MainNavbar.jsx";
 import SocialMediaBar from "./components/SocialMediaBar.jsx";
 import DonateComp from "./components/DonateComp.jsx";
-
 const BannerData2 = {
   discount: "30% OFF",
   title: "Happy Hours",
@@ -60,7 +59,6 @@ const App = () => {
       {/* <TrialComp /> */}
       {/* <DonateNavbar/> */}
       {/* <SocialMediaBar></SocialMediaBar> */}
-
       <Outlet />
       <Footer />
       <DownFooter />
