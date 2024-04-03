@@ -21,8 +21,8 @@ import DonateNavbar from "./components/DonateNavbar.jsx";
 import RightNavbar from "./components/Navbar/RightNavbar.jsx";
 
 import MainNavbar from "./components/Navbar/MainNavbar.jsx";
-
-
+import SocialMediaBar from "./components/SocialMediaBar.jsx";
+import DonateComp from "./components/DonateComp.jsx";
 
 const BannerData2 = {
   discount: "30% OFF",
@@ -55,10 +55,13 @@ const App = () => {
 
   return (
     <div className="dark:bg-gray-950 dark:text-white duration-200 overflow-hidden">
-      <RightNavbar/>
-   <MainNavbar/>
+      <RightNavbar />
+      <MainNavbar />
+      {/* <TrialComp /> */}
       {/* <DonateNavbar/> */}
-     <Outlet/>
+      {/* <SocialMediaBar></SocialMediaBar> */}
+
+      <Outlet />
       <Footer />
       <DownFooter />
       {/* <Popup orderPopup={orderPopup} handleOrderPopup={handleOrderPopup} /> */}

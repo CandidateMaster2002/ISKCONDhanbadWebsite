@@ -1,18 +1,7 @@
 import React from "react";
-import {
-  Navbar,
-  MobileNav,
-  Typography,
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
-import { IoMdSearch } from "react-icons/io";
-import { FaCaretDown, FaCartShopping } from "react-icons/fa6";
-import DarkMode from "./DarkMode";
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { MobileNav, Typography, IconButton } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import iskcondhanbadLogo from "../../assets/iskcon-dhanbad-image.jpg";
+import iskcondhanbadLogo from "../../assets/iskcon-dhanbad-image-removebg-preview.png";
 // import {OurServicesSvg,TempleScheduleSvg,DonateSvg,ContactUsSvg} from "../../Svg";
 import {
   OurServicesSvg,
@@ -23,18 +12,6 @@ import {
 
 const MainNavbar = () => {
   const [openNav, setOpenNav] = React.useState(false);
-  const [mode, setMode] = React.useState(localStorage.getItem("theme"));
-
-  React.useEffect(() => {
-    setMode(localStorage.getItem("theme"));
-  }, [localStorage.getItem("theme")]);
-
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
-  }, []);
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-black dark:text-white">
@@ -45,36 +22,6 @@ const MainNavbar = () => {
         className="flex items-center gap-x-2 p-1 font-medium"
       >
         <div dangerouslySetInnerHTML={{ __html: OurServicesSvg }} />
-
-        {/* <svg
-fill="green"
-height="40"
-width="40"
-version="1.1"
-id="_x31_"
-xmlns="http://www.w3.org/2000/svg"
-xmlns:xlink="http://www.w3.org/1999/xlink"
-viewBox="0 0 128 128"
-xml:space="preserve"
->
-<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-<g
-  id="SVGRepo_tracerCarrier"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-></g>
-<g id="SVGRepo_iconCarrier">
-  {" "}
-  <ellipse
-    transform="matrix(0.1607 -0.987 0.987 0.1607 -3.8377 74.789)"
-    cx="42.1"
-    cy="39.7"
-    rx="17.3"
-    ry="17.3"
-  ></ellipse>{" "}
-  <path d="M84.7,40.1c-0.6-1.6-1.6-3-3-4.1c-3.9-2.8-9.3-2-12.1,1.9c-2.8,3.9-2,9.3,1.9,12.1c3.9,2.8,9.3,2,12.1-1.9 c0.1-0.2,0.2-0.3,0.3-0.5l5.9,0.6L66.3,65.2l-32.2-5.4c-5.4-0.9-10.4,2.7-11.2,8.1l-7.3,45.1h35.8c1.6-5.6,2.8-11.4,3.8-17.3 c0.1-0.9,0.5-3,0.5-3.3c0.8-4.8,0.4-9.9-1.2-14.3l12.7,2.1c1.8,0.3,3.9-0.1,5.7-1.4l28.1-20.2c2.7-2,3.7-5.6,2.7-8.6l10.9,1.2 l0.8-7.5L84.7,40.1z"></path>{" "}
-</g>
-</svg> */}
 
         <Link to="our-services" className="flex items-center">
           Our Services
@@ -167,17 +114,7 @@ xml:space="preserve"
         </IconButton>
       </div>
       <MobileNav open={openNav}>
-        <div className="container mx-auto">
-          {navList}
-          {/* <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="text" size="sm" className="text-black">
-              <span>Log In</span>
-            </Button>
-            <Button fullWidth variant="gradient" size="sm" className="text-black">
-              <span>Sign in</span>
-            </Button>
-          </div> */}
-        </div>
+        <div className="container mx-auto">{navList}</div>
       </MobileNav>
     </div>
   );

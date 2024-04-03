@@ -1,16 +1,16 @@
-import React from 'react'
-import TopmostBannerCarousel from '../components/TopmostBannerCarousel'
-import SocialMediaLinks from '../components/SocialMediaLinks'
-import Products from '../components/Products/Products'
-import Blogs from '../components/Blogs'
-import Services from '../components/Services/Services'
-import Category from '../components/Category/Category'
-import Banner from '../components/Banner'
+import React from "react";
+import TopmostBannerCarousel from "../components/TopmostBannerCarousel";
+import SocialMediaLinks from "../components/SocialMediaLinks";
+import Products from "../components/Products/Products";
+import Blogs from "../components/Blogs";
+import Services from "../components/Services/Services";
+import Category from "../components/Category/Category";
+import Banner from "../components/Banner";
 import headphone from "../assets/hero/headphone.png";
-import gurukul from "../assets/JetAgeGurukul/voicessp.jpg"
-import DonationSection from '../components/DonationSection'
+import gurukul from "../assets/JetAgeGurukul/voicessp.jpg";
+import DonationSection from "../components/DonationSection";
+import DonateComp from "../components/DonateComp";
 const Home = () => {
-
   const BannerData = {
     discount: "30% OFF",
     title: "Fine Smile",
@@ -25,13 +25,10 @@ const Home = () => {
 
   return (
     <>
-    
-    
-     {/* <Hero handleOrderPopup={handleOrderPopup} /> */}
+      {/* <Hero handleOrderPopup={handleOrderPopup} /> */}
       <TopmostBannerCarousel />
       <Services />
-      <SocialMediaLinks />
-      <DonationSection/>
+      <DonateComp></DonateComp>
       {/* <Category /> */}
       {/* <Category2 /> */}
       {/* <Banner data={BannerData} /> */}
@@ -39,7 +36,7 @@ const Home = () => {
       {/* <Banner data={BannerData2} /> */}
       <Blogs />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

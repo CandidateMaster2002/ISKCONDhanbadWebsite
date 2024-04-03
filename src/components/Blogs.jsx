@@ -1,4 +1,3 @@
-import React from "react";
 import Heading from "../components/Shared/Heading";
 
 // import images

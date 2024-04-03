@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Carousel, initMDB } from "mdb-ui-kit";
 import { useState } from "react";
 import Jbs from "../assets/jbs.jpg";
 import VoiceAltar from "../assets/voice-altar2.png"
 import GaurNitai from "../assets/gaur-nitai2.png"
+import "../Styles/TopmostBannerCarousel.css";
 
 const TopmostBannerCarousel = () => {
   const [showGreenDiv, setShowGreenDiv] = useState(true);
@@ -72,7 +73,7 @@ const TopmostBannerCarousel = () => {
             <div className="img-container">
               <img
                 src={image}
-                className="d-block w-100 img-fluid"
+                className="d-block w-100 img-fluid carousel-image"
                 alt={`Slide ${index + 1}`}
               />
             </div>
