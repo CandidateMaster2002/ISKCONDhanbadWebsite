@@ -28,7 +28,7 @@ const ServiceData = [
   {
     id: 4,
     icon: socialmedia,
-    stats: 5000000,
+    stats: 500000,
     title: "reach on Social Media",
   },
 ];

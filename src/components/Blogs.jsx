@@ -1,7 +1,7 @@
 import Heading from "../components/Shared/Heading";
 
 // import images
-import Gurukul from "../assets/JetAgeGurukul/voicessp.jpg";
+import Gurukul from "../assets/voice_photo cropped.jpg";
 import IitJanmashtmi from "../assets/ISMJanmashtami/iitjanmashtmi.jpg";
 import JagJivanNagar from "../assets/ISKCONProjects/jagjivannagar.jpg";
 
@@ -23,8 +23,7 @@ const BlogData = [
   },
   {
     title: "Upcoming ISKCON Meditation Center",
-    subtitle:
-      "ISKCON Meditation Center under development in Jagjivan Nagar.",
+    subtitle: "ISKCON Meditation Center under development in Jagjivan Nagar.",
     published: "Jan 20, 2024 by Sabir",
     image: JagJivanNagar,
     aosDelay: "400",
@@ -35,7 +34,7 @@ const Blogs = () => {
     <div className="my-12 dark:bg-gray-950">
       <div className="container">
         {/* Header section */}
-        <Heading title="ISKCON Dhanbad Highlights"/>
+        <Heading title="ISKCON Dhanbad Highlights" />
 
         {/* Blog section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 gap-y-8 sm:gap-4 md:gap-7 dark:bg-gray-950">
@@ -45,14 +44,14 @@ const Blogs = () => {
               data-aos="fade-up"
               data-aos-delay={data.aosDelay}
               key={data.title}
-              className=""
+              className="flex flex-col"
             >
               {/* image section */}
-              <div className="overflow-hidden rounded-2xl mb-2 dark:bg-gray-950">
+              <div className="overflow-hidden rounded-2xl mb-2 dark:bg-gray-950 h-80">
                 <img
                   src={data.image}
                   alt=""
-                  className="w-full h-[220px]  hover:scale-105 duration-500"
+                  className="hover:scale-105 duration-500 object-cover h-full"
                 />
               </div>
               {/* content section */}
@@ -60,7 +59,7 @@ const Blogs = () => {
                 {/* <p className="text-xs text-gray-500">{data.published}</p> */}
                 <p className="font-bold line-clamp-2">{data.title}</p>
                 <p className="line-clamp-3 text-sm text-gray-600 dark:text-gray-400">
-                  {data.subtitle} 
+                  {data.subtitle}
                   {/* Click <a href="/donate">here</a> to support. */}
                 </p>
               </div>
