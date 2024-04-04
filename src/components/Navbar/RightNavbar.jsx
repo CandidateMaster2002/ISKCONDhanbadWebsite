@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import DarkMode from "./DarkMode";
 import i18n from "../../i18n";
+import { SocialHandleLinks } from "../../InfoAndData";
 
 const handleLanguageChange = (selectedLanguage, setLanguage) => {
   localStorage.setItem("language", selectedLanguage);
@@ -36,37 +37,37 @@ const RightNavbar = () => {
         <div className="container flex justify-between items-center">
           {/* Social Media Icons */}
           <div className="flex gap-2">
-            <a href="#" className="text-white">
+            <a href={SocialHandleLinks.twitter} className="text-white">
               <FontAwesomeIcon
                 icon={faTwitter}
                 style={{ color: "#1DA1F2", fontSize: "1.8em" }}
               />
             </a>
-            <a href="#" className="text-white">
+            <a href={SocialHandleLinks.facebook} className="text-white">
               <FontAwesomeIcon
                 icon={faFacebook}
                 style={{ color: "blue", fontSize: "1.8em" }}
               />
             </a>
-            <a href="#" className="text-white">
+            <a href={SocialHandleLinks.instagram} className="text-white">
               <FontAwesomeIcon
                 icon={faInstagram}
                 style={{ color: "#E1306C", fontSize: "1.8em" }}
               />
             </a>
-            <a href="#" className="text-white">
+            <a href={SocialHandleLinks.whatsapp} className="text-white">
               <FontAwesomeIcon
                 icon={faWhatsapp}
                 style={{ color: "#25D366", fontSize: "1.8em" }}
               />
             </a>
-            <a href="#" className="text-white">
+            <a href={SocialHandleLinks.youtube} className="text-white">
               <FontAwesomeIcon
                 icon={faYoutube}
                 style={{ color: "#FF0000", fontSize: "1.8em" }}
               />
             </a>
-            <a href="#" className="text-white">
+            <a href={SocialHandleLinks.linkedin} className="text-white">
               <FontAwesomeIcon
                 icon={faLinkedin}
                 style={{ color: "#0077b9", fontSize: "1.8em" }}

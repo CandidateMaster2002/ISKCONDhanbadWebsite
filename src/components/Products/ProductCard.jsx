@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../Shared/Button";
-import { Link } from "react-router-dom";
 const ProductCard = ({ data }) => {
+
   return (
     <div className="mb-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 place-items-center">
@@ -21,13 +21,13 @@ const ProductCard = ({ data }) => {
               />
               {/* hover button */}
               <div className="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full text-center group-hover:backdrop-blur-sm justify-center items-center duration-200 rounded-md">
-                <Link to={data.link}>
+              <a href={data.link}>
                   <Button
                     text={"Know more"}
                     bgColor={"bg-primary"}
                     textColor={"text-white"}
                   />
-                </Link>
+                </a>
               </div>
             </div>
             <div className="leading-7 py-2">

@@ -1,6 +1,5 @@
 import React from "react";
 import TopmostBannerCarousel from "../components/TopmostBannerCarousel";
-import SocialMediaLinks from "../components/SocialMediaLinks";
 import Products from "../components/Products/Products";
 import Blogs from "../components/Blogs";
 import Services from "../components/Services/Services";

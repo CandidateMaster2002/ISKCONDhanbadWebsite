@@ -4,7 +4,6 @@ import Category from "./components/Category/Category";
 import Category2 from "./components/Category/Category2";
 import Services from "./components/Services/Services";
 import Banner from "./components/Banner";
-import SocialMediaLinks from "./components/SocialMediaLinks.jsx";
 import { Outlet } from "react-router-dom";
 import headphone from "./assets/hero/headphone.png";
 import smartwatch2 from "./assets/category/smartwatch2-removebg-preview.png";

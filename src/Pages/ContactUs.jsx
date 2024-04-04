@@ -1,13 +1,21 @@
 import React from "react";
 import gaurnitai from "../assets/gaur-nitai-contactus.png";
-import iskcondhanbadlogo from "../assets/iskcon-dhanbad-image.jpg";
-import SocialMediaLinks from "../components/SocialMediaLinks";
+import iskcondhanbadlogo from "../assets/iskcon-dhanbad-image-removebg-preview.png";
 import whatsapp from "../assets/whatsapp.png";
 import instagram from "../assets/Instagram.webp";
 import call from "../assets/call2.png";
 import youtube from "../assets/youtube3.png";
 import facebook from "../assets/Facebook.png";
 import { SocialHandleLinks } from "../InfoAndData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faFacebook,
+  faInstagram,
+  faWhatsapp,
+  faYoutube,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 const ContactUs = () => {
   return (
     <>
@@ -24,7 +32,6 @@ const ContactUs = () => {
           <div class="flex flex-wrap">
             <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
               <img src={iskcondhanbadlogo} alt="" />
-
             </div>
             <div class="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
               <div class="flex flex-wrap">
@@ -156,10 +163,12 @@ const ContactUs = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <img
-                            src={whatsapp}
-                            alt="brand"
-                            className="w-[80px] dark:invert"
+                          <FontAwesomeIcon
+                            icon={faWhatsapp}
+                            style={{
+                              color: "#25D366",
+                              fontSize: "4em",
+                            }}
                           />
                         </a>
                         <a
@@ -167,10 +176,12 @@ const ContactUs = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <img
-                            src={youtube}
-                            alt="brand"
-                            className="w-[80px] dark:invert"
+                          <FontAwesomeIcon
+                            icon={faYoutube}
+                            style={{
+                              color: "#FF0000",
+                              fontSize: "4em",
+                            }}
                           />
                         </a>
                         <a
@@ -178,10 +189,12 @@ const ContactUs = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <img
-                            src={instagram}
-                            alt="brand"
-                            className="w-[80px] dark:invert"
+                          <FontAwesomeIcon
+                            icon={faInstagram}
+                            style={{
+                              color: "#E1306C",
+                              fontSize: "4em",
+                            }}
                           />
                         </a>
                         <a
@@ -189,10 +202,12 @@ const ContactUs = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <img
-                            src={facebook}
-                            alt="brand"
-                            className="w-[80px] dark:invert"
+                          <FontAwesomeIcon
+                            icon={faFacebook}
+                            style={{
+                              color: "blue",
+                              fontSize: "4em",
+                            }}
                           />
                         </a>
                       </div>
