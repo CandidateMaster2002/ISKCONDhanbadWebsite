@@ -11,6 +11,7 @@ import {
 import DarkMode from "./DarkMode";
 import i18n from "../../i18n";
 import { SocialHandleLinks } from "../../InfoAndData";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const handleLanguageChange = (selectedLanguage, setLanguage) => {
   localStorage.setItem("language", selectedLanguage);
@@ -37,43 +38,47 @@ const RightNavbar = () => {
         <div className="container flex justify-between items-center">
           {/* Social Media Icons */}
           <div className="flex gap-2">
-            <a href={SocialHandleLinks.twitter} className="text-white">
-              <FontAwesomeIcon
-                icon={faTwitter}
-                style={{ color: "#1DA1F2", fontSize: "1.8em" }}
-              />
-            </a>
-            <a href={SocialHandleLinks.facebook} className="text-white">
-              <FontAwesomeIcon
-                icon={faFacebook}
-                style={{ color: "blue", fontSize: "1.8em" }}
-              />
-            </a>
-            <a href={SocialHandleLinks.instagram} className="text-white">
-              <FontAwesomeIcon
-                icon={faInstagram}
-                style={{ color: "#E1306C", fontSize: "1.8em" }}
-              />
-            </a>
-            <a href={SocialHandleLinks.whatsapp} className="text-white">
+            <a href={SocialHandleLinks.whatsapp}>
               <FontAwesomeIcon
                 icon={faWhatsapp}
                 style={{ color: "#25D366", fontSize: "1.8em" }}
               />
             </a>
-            <a href={SocialHandleLinks.youtube} className="text-white">
+            <a href={SocialHandleLinks.youtube}>
               <FontAwesomeIcon
                 icon={faYoutube}
                 style={{ color: "#FF0000", fontSize: "1.8em" }}
               />
             </a>
-            <a href={SocialHandleLinks.linkedin} className="text-white">
+            <a href="#" onClick={() => window.open("tel:+919903013399")}>
+              <FaPhoneAlt style={{ fontSize: "1.8em", color: "green" }} />
+            </a>
+            <a href={SocialHandleLinks.instagram}>
+              <FontAwesomeIcon
+                icon={faInstagram}
+                style={{ color: "#E1306C", fontSize: "1.8em" }}
+              />
+            </a>
+            <a href={SocialHandleLinks.facebook}>
+              <FontAwesomeIcon
+                icon={faFacebook}
+                style={{ color: "blue", fontSize: "1.8em" }}
+              />
+            </a>
+            <a href={SocialHandleLinks.linkedin}>
               <FontAwesomeIcon
                 icon={faLinkedin}
                 style={{ color: "#0077b9", fontSize: "1.8em" }}
               />
             </a>
+            <a href={SocialHandleLinks.twitter}>
+              <FontAwesomeIcon
+                icon={faTwitter}
+                style={{ color: "#1DA1F2", fontSize: "1.8em" }}
+              />
+            </a>
           </div>
+
           {/* Language Buttons and Dark Mode section */}
           <div className="flex justify-end items-center gap-1">
             {/* Language Buttons */}
