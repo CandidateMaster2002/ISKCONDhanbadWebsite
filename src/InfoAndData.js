@@ -11,11 +11,11 @@ const handleCallClick = (phoneNumber) => {
   window.location.href = telUrl;
 };
 
-// const handleLanguageChange = (lang) => {
-//   const { t,i18n } = useTranslation();
-//   localStorage.setItem("language", lang);
-//   i18n.changeLanguage(lang);
-// };
+const handleLanguageChange = (lang) => {
+  const { t,i18n } = useTranslation();
+  localStorage.setItem("language", lang);
+  i18n.changeLanguage(lang);
+};
 
 const currentLanguage = () => localStorage.getItem("language");
 

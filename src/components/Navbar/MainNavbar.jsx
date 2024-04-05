@@ -2,7 +2,8 @@ import React from "react";
 import { MobileNav, Typography, IconButton } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import iskcondhanbadLogo from "../../assets/iskcon-dhanbad-image-removebg-preview.png";
-// import {OurServicesSvg,TempleScheduleSvg,DonateSvg,ContactUsSvg} from "../../Svg";
+import { useTranslation, Trans } from "react-i18next";
+import i18n from "i18next";
 import {
   OurServicesSvg,
   TempleScheduleSvg,
@@ -13,10 +14,12 @@ import {
 import ContactUs from "../../assets/contact-removebg-preview.png";
 import Donate from "../../assets/3d-render-hand-put-golden-coin-into-piggy-bank-removebg-preview (1).png";
 import Clock from "../../assets/clock-removebg-preview.png";
-import Services from "../../assets/servicemic-removebg-preview.png"
+import Services from "../../assets/servicemic-removebg-preview.png";
 
 const MainNavbar = () => {
   const [openNav, setOpenNav] = React.useState(false);
+
+  const { t } = useTranslation();
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-black dark:text-white">
@@ -26,10 +29,9 @@ const MainNavbar = () => {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
-       <img src={Services} alt="Contact Us" className="w-10 h-10" />
-
+        <img src={Services} alt="Our Services" className="w-10 h-10" />
         <Link to="our-services" className="flex items-center">
-          Our Services
+          {t('Our Services')}
         </Link>
       </Typography>
       <Typography
@@ -38,9 +40,9 @@ const MainNavbar = () => {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
-      <img src={Clock} alt="Contact Us" className="w-10 h-10" />
+        <img src={Clock} alt="Temple Schedule" className="w-10 h-10" />
         <Link to="temple-schedule" className="flex items-center">
-          Temple Schedule
+          {t('Temple Schedule')}
         </Link>
       </Typography>
       <Typography
@@ -49,9 +51,9 @@ const MainNavbar = () => {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
-        <img src={Donate} alt="Contact Us" className="w-10 h-10" />
+        <img src={Donate} alt="Donate" className="w-10 h-10" />
         <Link to="donate" className="flex items-center">
-          Donate
+          {t('Donate')}
         </Link>
       </Typography>
       <Typography
@@ -62,7 +64,7 @@ const MainNavbar = () => {
       >
         <img src={ContactUs} alt="Contact Us" className="w-10 h-10" />
         <Link to="contact-us" className="flex items-center">
-          Contact Us
+          {t('Contact Us')}
         </Link>
       </Typography>
     </ul>
