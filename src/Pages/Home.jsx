@@ -24,15 +24,11 @@ const Home = () => {
 
   return (
     <>
-      {/* <Hero handleOrderPopup={handleOrderPopup} /> */}
       <TopmostBannerCarousel />
       <Services />
       <DonateComp></DonateComp>
-      {/* <Category /> */}
-      {/* <Category2 /> */}
-      {/* <Banner data={BannerData} /> */}
+
       <Products />
-      {/* <Banner data={BannerData2} /> */}
       <Blogs />
     </>
   );
