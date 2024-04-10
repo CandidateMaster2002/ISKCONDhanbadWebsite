@@ -12,7 +12,7 @@ const handleCallClick = (phoneNumber) => {
 };
 
 const handleLanguageChange = (lang) => {
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   localStorage.setItem("language", lang);
   i18n.changeLanguage(lang);
 };
@@ -26,15 +26,16 @@ const SocialHandleLinks = {
   linkedin: "https://www.linkedin.com/in/yourProfile",
   youtube: "https://www.youtube.com/@iskcondhanbad",
   callingno: "+91 9903013399",
-  linkedin:"https://www.linkedin.com/posts/iskcon-dhn_iskcondhanbadofficial-iskcon-iskcondhanbad-activity-7129883450437742594-3hw8/",
-  twitter:"https://twitter.com/iskcondhanbad?lang=en",
+  linkedin:
+    "https://www.linkedin.com/posts/iskcon-dhn_iskcondhanbadofficial-iskcon-iskcondhanbad-activity-7129883450437742594-3hw8/",
+  twitter: "https://twitter.com/iskcondhanbad?lang=en",
 };
 
 const AboutLinks = [
   {
-    id:0,
-    name:"Home",
-    link:"/"
+    id: 0,
+    name: "Home",
+    link: "/",
   },
   {
     id: 1,
@@ -86,7 +87,7 @@ const ActivitiesLinks = [
   },
 ];
 
-const ProductsData = [
+const OurServicesData = [
   {
     id: 1,
     img: DhamYatra,
@@ -137,20 +138,13 @@ const ProductsData = [
     link: "village-preaching",
     aosDelay: "400",
   },
-  // {
-  //   id: 8,
-  //   img: Img5,
-  //   title: "Printed ",
-  //   link: "220",
-  //   aosDelay: "600",
-  // },
 ];
 
 export {
   SocialHandleLinks,
   AboutLinks,
   ActivitiesLinks,
-  ProductsData,
+  OurServicesData,
   handleCallClick,
   currentLanguage,
 };

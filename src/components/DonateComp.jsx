@@ -1,4 +1,4 @@
-import fruitseller from "../assets/fruitsellerdonate2.png";
+import fruitseller from "../assets/donate_wallpaper.png";
 const DonateComp = () => {
   return (
     <div className="w-full mx-auto">

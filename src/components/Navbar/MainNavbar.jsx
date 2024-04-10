@@ -4,12 +4,7 @@ import { Link } from "react-router-dom";
 import iskcondhanbadLogo from "../../assets/iskcon-dhanbad-image-removebg-preview.png";
 import { useTranslation, Trans } from "react-i18next";
 import i18n from "i18next";
-import {
-  OurServicesSvg,
-  TempleScheduleSvg,
-  DonateSvg,
-  ContactUsSvg,
-} from "../../Svg";
+
 
 import ContactUs from "../../assets/contact-removebg-preview.png";
 import Donate from "../../assets/3d-render-hand-put-golden-coin-into-piggy-bank-removebg-preview (1).png";
