@@ -10,14 +10,14 @@ const AboutIskcon = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white">
     {/* Cover Photo and Title */}
-    <div className="relative h-64 w-full mb-8">
+    <div className="relative h-64 w-full mb-0">
       <img
         src={Radhamadhav}
         alt="Cover"
         className="object-cover h-full w-full rounded-t-md"
       />
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-white mt-32">About ISKCON</h1>
+        <h1 className="text-5xl font-bold text-white mt-32">About ISKCON</h1>
       </div>
     </div>
 

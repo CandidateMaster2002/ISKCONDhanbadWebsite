@@ -4,7 +4,7 @@ import { FaMobileAlt } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { SocialHandleLinks } from "../InfoAndData";
-// import { ActivitiesLinks } from "../InfoAndData";
+import { useTranslation } from "react-i18next";
 
 import {
   FaFacebook,
@@ -14,6 +14,8 @@ import {
 } from "react-icons/fa6";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="dark:bg-gray-950">
       <div className="container">
@@ -25,18 +27,19 @@ const Footer = () => {
               className="text-primary font-semibold tracking-widest text-2xl uppercase sm:text-3xl
 "
             >
-              ISKCON Dhanbad
+              {t("ISKCON Dhanbad")}
             </Link>
             <p className="text-gray-600 dark:text-white/70  lg:pr-24 pt-3">
-              Serving since 56 years,ISKCON has distributed 100+ crore
-              scriptures and 300+ crore meals around the world.
+              {t("footer-donate-subtitle")}
             </p>
-            <p className="text-gray-600 mt-4">Support us in our mission...</p>
+            <p className="text-gray-600 mt-4">
+              {t("Support us in our mission...")}
+            </p>
             <Link
               to="donate"
               className="inline-block bg-primary/90 text-white py-2 px-4 mt-4 text-sm rounded-full"
             >
-              DONATE Now !
+             {t("DONATE Now")} !
             </Link>
           </div>
 
@@ -50,7 +53,7 @@ const Footer = () => {
                 {ActivitiesLinks.map((data, index) => (
                   <Link to={data.link} key={index}>
                     <li className="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">
-                      <span>{data.name}</span>
+                      <span>{t(data.name)}</span>
                     </li>{" "}
                     <br />
                   </Link>
@@ -69,7 +72,7 @@ const Footer = () => {
                       to={data.link}
                       className="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300"
                     >
-                      {data.name}
+                      {t(data.name)}
                     </Link>
                   </li>
                 ))}
@@ -82,10 +85,7 @@ const Footer = () => {
               <div>
                 <div className="flex items-center gap-3">
                   <FaLocationArrow />
-                  <p>
-                    21, Dhruv Singh Colony, Rahargora, Dhaiya, Dhanbad,
-                    Jharkhand.
-                  </p>
+                  <p>{t("address")}</p>
                 </div>
                 <div className="flex items-center gap-3 mt-6">
                   <FaMobileAlt />
@@ -94,20 +94,32 @@ const Footer = () => {
 
                 {/* social links */}
                 <div className="flex items-center gap-3 mt-6">
-                  <a href={SocialHandleLinks.youtube}  target="_blank"
-            rel="noopener noreferrer">
+                  <a
+                    href={SocialHandleLinks.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaYoutube className="text-3xl hover:text-primary duration-300" />
                   </a>
-                  <a href={SocialHandleLinks.linkedin}  target="_blank"
-            rel="noopener noreferrer">
+                  <a
+                    href={SocialHandleLinks.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaLinkedin className="text-3xl hover:text-primary duration-200" />
                   </a>
-                  <a href={SocialHandleLinks.instagram}  target="_blank"
-            rel="noopener noreferrer">
+                  <a
+                    href={SocialHandleLinks.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaInstagram className="text-3xl hover:text-primary duration-300" />
                   </a>
-                  <a href={SocialHandleLinks.facebook}  target="_blank"
-            rel="noopener noreferrer">
+                  <a
+                    href={SocialHandleLinks.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaFacebook className="text-3xl hover:text-primary duration-200" />
                   </a>
                 </div>

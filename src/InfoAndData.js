@@ -67,8 +67,8 @@ const ActivitiesLinks = [
   },
   {
     id: 3,
-    name: "Dhanbad Tribal Care",
-    link: "/dhanbad-tribal-care",
+    name: "Tribal Care",
+    link: "/tribal-care",
   },
   {
     id: 4,

@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       { path: "about-iskcon-founder", element: <AboutISKCONFounder /> },
       { path: "book-distribution", element: <BookDistribution /> },
       { path: "contact-us", element: <ContactUs /> },
-      { path: "dhanbad-tribal-care", element: <DhanbadTribalCare /> },
+      { path: "tribal-care", element: <DhanbadTribalCare /> },
       { path: "donate", element: <Donate /> },
       { path: "Faaltu", element: <Faaltu /> },
       { path: "girls-empowerment", element: <GirlsEmpowerment /> },

@@ -66,7 +66,7 @@ const IskconIn2023 = () => {
     <div className="dark:bg-gray-950">
       <div className="container my-14 md:my-20">
         <h1 className="text-2xl font-bold mb-6 text-center">
-          ISKCON Dhanbad in 2023
+         {t("ISKCON Dhanbad in 2023")} 
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 gap-y-8">
           {ServiceData.map((data) => (

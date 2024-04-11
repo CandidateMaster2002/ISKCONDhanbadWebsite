@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
 import Button from "../Shared/Button";
+import { useTranslation } from "react-i18next";
 const OurServiceCard = ({ data }) => {
+
+  const { t } = useTranslation();
 
   return (
     <div className="mb-10">
@@ -31,7 +33,7 @@ const OurServiceCard = ({ data }) => {
               </div>
             </div>
             <div className="leading-7 py-2">
-              <h2 className="font-semibold">{data.title}</h2>
+              <h2 className="font-semibold">{t(data.title)}</h2>
               {/* <h2 className="font-bold">${data.price}</h2> */}
             </div>
           </div>

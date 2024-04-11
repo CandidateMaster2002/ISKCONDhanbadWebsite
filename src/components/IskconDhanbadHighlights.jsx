@@ -1,37 +1,36 @@
 import Heading from "./Shared/Heading";
-
-// import images
+import { useTranslation } from "react-i18next";
 import Gurukul from "../assets/voice_photo cropped.jpg";
 import IitJanmashtmi from "../assets/ISMJanmashtami/iitjanmashtmi.jpg";
 import JagJivanNagar from "../assets/ISKCONProjects/jagjivannagar.jpg";
 
 const BlogData = [
   {
-    title: "Jet Age GuruKul",
-    subtitle:" jet-age-gurukul-subtitle",
+    title: "Jet Age Gurukul",
+    subtitle:"jet-age-gurukul-subtitle",
     image: Gurukul,
     aosDelay: "0",
   },
   {
     title: "IIT Dhanbad Official Janmashatmi",
-    subtitle:
-      "IIT Dhanbad invited ISKCON Dhanbad for Janmashtami celebration with 1000+ students",
+    subtitle:"iit-dhanbad-janmashtmi-subtitle",
     image: IitJanmashtmi,
     aosDelay: "200",
   },
   {
     title: "Upcoming ISKCON Meditation Center",
-    subtitle: "ISKCON Meditation Center under development in Jagjivan Nagar.",
+    subtitle:"iskcon-meditation-center-subtitle",
     image: JagJivanNagar,
     aosDelay: "400",
   },
 ];
 const IskconDhanbadHighlights = () => {
+  const { t } = useTranslation();
   return (
     <div className="my-12 dark:bg-gray-950">
       <div className="container">
         {/* Header section */}
-        <Heading title="ISKCON Dhanbad Highlights" />
+        <Heading title={t("ISKCON Dhanbad Highlights")} />
 
         {/* Blog section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 gap-y-8 sm:gap-4 md:gap-7 dark:bg-gray-950">
@@ -54,9 +53,9 @@ const IskconDhanbadHighlights = () => {
               {/* content section */}
               <div className="space-y-2 dark:bg-gray-950">
                 {/* <p className="text-xs text-gray-500">{data.published}</p> */}
-                <p className="font-bold line-clamp-2">{data.title}</p>
+                <p className="font-bold line-clamp-2">{t(data.title)}</p>
                 <p className="line-clamp-3 text-sm text-gray-600 dark:text-gray-400">
-                  {data.subtitle}
+                  {t(data.subtitle)}
                   {/* Click <a href="/donate">here</a> to support. */}
                 </p>
               </div>

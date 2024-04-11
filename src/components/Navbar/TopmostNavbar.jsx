@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faTwitter,
   faFacebook,
   faInstagram,
   faWhatsapp,
@@ -69,12 +68,6 @@ const TopmostNavbar = () => {
               <FontAwesomeIcon
                 icon={faLinkedin}
                 style={{ color: "#0077b9", fontSize: "1.8em" }}
-              />
-            </a>
-            <a href={SocialHandleLinks.twitter}>
-              <FontAwesomeIcon
-                icon={faTwitter}
-                style={{ color: "#1DA1F2", fontSize: "1.8em" }}
               />
             </a>
           </div>
