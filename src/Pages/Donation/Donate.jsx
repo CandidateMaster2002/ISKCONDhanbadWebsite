@@ -2,6 +2,8 @@ import { FaCopy } from "react-icons/fa";
 import qrCodeImage from "../../assets/iskconqrcode.png";
 import PaytmLogo from "../../assets/paytmlogo.png";
 import RazorpayLogo from "../../assets/razorpay.png";
+import { Link } from 'react-router-dom';
+
 
 const Donate = () => {
   const upiId = "ISKCON.eazypay@icici";
@@ -25,8 +27,8 @@ const Donate = () => {
           <h2 className="text-3xl font-semibold mb-4">Donate to Our Cause</h2>
 
           <div className="flex justify-center items-center">
-            <a
-              href="donate-every-month"
+            <Link
+              to="/donate-every-month"
               className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group mb-2"
             >
               <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
@@ -65,7 +67,7 @@ const Donate = () => {
               <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white pl-2">
                 Donate Every Month
               </span>
-            </a>
+            </Link>
           </div>
           <hr />
           {/* QR Code */}
