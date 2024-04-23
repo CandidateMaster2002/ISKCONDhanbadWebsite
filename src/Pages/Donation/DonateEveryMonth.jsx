@@ -4,8 +4,8 @@ const DonateEveryMonth = () => {
   return (
     <div className="flex justify-center items-center min-h-screen pt-8 pb-8">
       <div>
-        fff
-        {/* <RazorpayButton /> */}
+        {/* fff */}
+        <RazorpayButton />
       </div>
     </div>
   );
