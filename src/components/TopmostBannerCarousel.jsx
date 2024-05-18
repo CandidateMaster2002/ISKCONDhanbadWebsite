@@ -58,7 +58,7 @@ const TopmostBannerCarousel = () => {
             key={index}
             className={`carousel-item ${activeSlide === index ? "active" : ""}`}
           >
-            <div className="img-container border">
+            <div className="img-container">
               <img
                 src={image}
                 className="d-block w-100 w-full h-full img-fluid carousel-image"
