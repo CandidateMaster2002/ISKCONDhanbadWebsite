@@ -75,7 +75,7 @@ const IskconIn2023 = () => {
                 src={data.icon}
                 alt=""
                 style={{ height: iconHeight, width: iconHeight }}
-                className="rounded-full h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 text-primary"
+                className="rounded-full h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28"
               />
               <div>
                 <h1

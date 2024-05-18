@@ -1,15 +1,15 @@
-import React from "react";
 import LightButton from "../../assets/website/light-mode-button.png";
 import DarkButton from "../../assets/website/dark-mode-button.png";
-
+import { useState,useEffect} from "react";
 const DarkMode = () => {
-  const [theme, setTheme] = React.useState(
+  const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
 
+
   const element = document.documentElement; // access to html element
 
-  React.useEffect(() => {
+  useEffect(() => {
     localStorage.setItem("theme", theme);
     if (theme === "dark") {
       element.classList.add("dark");

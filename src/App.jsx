@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Outlet } from "react-router-dom";
-import smartwatch2 from "./assets/category/smartwatch2-removebg-preview.png";
 import Footer from "./components/Footer.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";

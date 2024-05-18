@@ -3,7 +3,7 @@ import { MobileNav, Typography, IconButton } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import iskcondhanbadLogo from "../../assets/iskcon-dhanbad-image-removebg-preview.png";
 import {useTranslation} from "react-i18next";
-import i18n from "i18next";
+// import i18n from "i18next";
 
 
 import ContactUs from "../../assets/contact-removebg-preview.png";

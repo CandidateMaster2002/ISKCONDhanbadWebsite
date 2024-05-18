@@ -1,4 +1,3 @@
-import React from "react";
 import Heading from "../Shared/Heading";
 import OurServiceCard from "./OurServiceCard";
 import { OurServicesData } from "../../InfoAndData";

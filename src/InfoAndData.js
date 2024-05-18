@@ -1,4 +1,3 @@
-import React from "react";
 import DhamYatra from "../src/assets/dhamyatra.png";
 import GirlsEmpowerment from "../src/assets/maataji_abhishekam.png";
 import YouthEmpowerment from "../src/assets/Presankalpa2023.png";
@@ -11,19 +10,18 @@ const handleCallClick = (phoneNumber) => {
   window.location.href = telUrl;
 };
 
-const handleLanguageChange = (lang) => {
-  const { t, i18n } = useTranslation();
-  localStorage.setItem("language", lang);
-  i18n.changeLanguage(lang);
-};
+// const handleLanguageChange = (lang) => {
+//   const { t, i18n } = useTranslation();
+//   localStorage.setItem("language", lang);
+//   i18n.changeLanguage(lang);
+// };
 
-const currentLanguage = () => localStorage.getItem("language");
+// const currentLanguage = () => localStorage.getItem("language");
 
 const SocialHandleLinks = {
   facebook: "https://m.facebook.com/profile.php/?id=100064648604080",
   whatsapp: "https://wa.me/919903013399",
   instagram: "https://www.instagram.com/iskcondhanbadofficial/?hl=en",
-  linkedin: "https://www.linkedin.com/in/yourProfile",
   youtube: "https://www.youtube.com/@iskcondhanbad",
   callingno: "+91 9903013399",
   linkedin:
@@ -146,5 +144,6 @@ export {
   ActivitiesLinks,
   OurServicesData,
   handleCallClick,
-  currentLanguage,
+  // currentLanguage,
+  // handleLanguageChange
 };

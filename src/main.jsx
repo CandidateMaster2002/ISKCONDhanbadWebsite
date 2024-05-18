@@ -4,7 +4,6 @@ import App from "./App.jsx";
 import "./index.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import TopmostBannerCarousel from "./components/TopmostBannerCarousel.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "flowbite";
 import AboutIskcon from "./Pages/AboutIskcon.jsx";
@@ -27,6 +26,7 @@ import Faaltu from "./Pages/Faaltu.jsx";
 import TempleSchedule from "./Pages/TempleSchedule.jsx";
 import OurServices from "./components/OurServices/OurServices.jsx";
 import DonateEveryMonth from "./Pages/Donation/DonateEveryMonth.jsx";
+import ComingSoon from "./Pages/ComingSoon.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,24 +34,26 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "about-iskcon", element: <AboutIskcon /> },
-      { path: "about-iskcon-dhanbad", element: <AboutISKCONDhanbad /> },
+      { path: "about-iskcon-dhanbad", element: <ComingSoon /> },
       { path: "about-iskcon-founder", element: <AboutISKCONFounder /> },
-      { path: "book-distribution", element: <BookDistribution /> },
+      { path: "book-distribution", element: <ComingSoon /> },
       { path: "contact-us", element: <ContactUs /> },
-      { path: "tribal-care", element: <DhanbadTribalCare /> },
+      { path: "tribal-care", element: <ComingSoon /> },
       { path: "donate", element: <Donate /> },
       { path: "Faaltu", element: <Faaltu /> },
-      { path: "girls-empowerment", element: <GirlsEmpowerment /> },
+      { path: "girls-empowerment", element: <ComingSoon /> },
       { path: "privacy-policy", element: <PrivacyPolicy /> },
       { path: "refund-cancel", element: <RefundCancel /> },
       { path: "terms-and-conditions", element: <TnC /> },
-      { path: "village-preaching", element: <VillagePreaching /> },
-      { path: "youth-empowerment", element: <YouthEmpowerment /> },
-      { path: "dham-yatra", element: <DhamYatra /> },
-      { path: "festivals", element: <Festivals /> },
+      { path: "village-preaching", element: <ComingSoon /> },
+      { path: "youth-empowerment", element: <ComingSoon /> },
+      { path: "dham-yatra", element: <ComingSoon /> },
+      { path: "festivals", element: <ComingSoon /> },
       { path: "temple-schedule", element: <TempleSchedule /> },
       { path: "donate-every-month", element: <DonateEveryMonth /> },
       { path: "our-services", element: <OurServices /> },
+      { path: "coming-soon", element: <ComingSoon /> },
+
     ],
   },
 ]);
