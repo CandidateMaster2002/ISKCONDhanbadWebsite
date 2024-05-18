@@ -26,7 +26,7 @@ const MainNavbar = () => {
       >
         <img src={Services} alt="Our Services" className="w-10 h-10" />
         <Link to="our-services" className="flex items-center">
-          {t('Our Services')}
+          {t("Our Services")}
         </Link>
       </Typography>
       <Typography
@@ -37,7 +37,7 @@ const MainNavbar = () => {
       >
         <img src={Clock} alt="Temple Schedule" className="w-10 h-10" />
         <Link to="temple-schedule" className="flex items-center">
-          {t('Temple Schedule')}
+          {t("Temple Schedule")}
         </Link>
       </Typography>
       <Typography
@@ -48,7 +48,7 @@ const MainNavbar = () => {
       >
         <img src={Donate} alt="Donate" className="w-10 h-10" />
         <Link to="donate" className="flex items-center">
-          {t('Donate')}
+          {t("Donate")}
         </Link>
       </Typography>
       <Typography
@@ -59,7 +59,7 @@ const MainNavbar = () => {
       >
         <img src={ContactUs} alt="Contact Us" className="w-10 h-10" />
         <Link to="contact-us" className="flex items-center">
-          {t('Contact Us')}
+          {t("Contact Us")}
         </Link>
       </Typography>
     </ul>
