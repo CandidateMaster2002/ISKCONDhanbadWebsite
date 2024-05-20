@@ -35,32 +35,32 @@ const ServiceData = [
 
 const IskconIn2023 = () => {
   const { t } = useTranslation();
-  const [iconHeight, setIconHeight] = useState("auto");
+  // const [iconHeight, setIconHeight] = useState("auto");
 
-  useEffect(() => {
-    const maxHeight = Math.max(
-      ...ServiceData.map((data) => {
-        const titleHeight = document.getElementById(
-          `title-${data.id}`
-        )?.offsetHeight;
-        const statsHeight = document.getElementById(
-          `stats-${data.id}`
-        )?.offsetHeight;
-        return titleHeight + statsHeight;
-      })
-    );
-    setIconHeight(`${maxHeight}px`);
-  }, []);
+  // useEffect(() => {
+  //   const maxHeight = Math.max(
+  //     ...ServiceData.map((data) => {
+  //       const titleHeight = document.getElementById(
+  //         `title-${data.id}`
+  //       )?.offsetHeight;
+  //       const statsHeight = document.getElementById(
+  //         `stats-${data.id}`
+  //       )?.offsetHeight;
+  //       return titleHeight + statsHeight;
+  //     })
+  //   );
+  //   setIconHeight(`${maxHeight}px`);
+  // }, []);
 
-  function Number({ n }) {
-    const { number } = useSpring({
-      from: { number: 0 },
-      number: n,
-      delay: 200,
-      config: { mass: 1, tension: 20, friction: 10 },
-    });
-    return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
-  }
+  // function Number({ n }) {
+  //   const { number } = useSpring({
+  //     from: { number: 0 },
+  //     number: n,
+  //     delay: 200,
+  //     config: { mass: 1, tension: 20, friction: 10 },
+  //   });
+  //   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
+  // }
 
   return (
     <div className="dark:bg-gray-950">
@@ -74,7 +74,7 @@ const IskconIn2023 = () => {
               <img
                 src={data.icon}
                 alt=""
-                style={{ height: iconHeight, width: iconHeight }}
+                // style={{ height: iconHeight, width: iconHeight }}
                 className="rounded-full h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28"
               />
               <div>
@@ -82,7 +82,7 @@ const IskconIn2023 = () => {
                   id={`stats-${data.id}`}
                   className="text-xl md:text-2xl font-bold mb-1 flex items-center"
                 >
-                  <Number n={data.stats}/>
+                  88
                   <span className="ml-1">+</span>
                 </h1>
 

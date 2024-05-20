@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
-  faInstagram,
+  // faFacebook,
+  // faInstagram,
   faWhatsapp,
   faYoutube,
   faLinkedin,
