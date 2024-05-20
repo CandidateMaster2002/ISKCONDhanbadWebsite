@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import holybook from "../assets/books.jpg";
 import socialmedia from "../assets/socialmediamobile.jpg";
@@ -52,15 +52,15 @@ const IskconIn2023 = () => {
   //   setIconHeight(`${maxHeight}px`);
   // }, []);
 
-  // function Number({ n }) {
-  //   const { number } = useSpring({
-  //     from: { number: 0 },
-  //     number: n,
-  //     delay: 200,
-  //     config: { mass: 1, tension: 20, friction: 10 },
-  //   });
-  //   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
-  // }
+  function Number({ n }) {
+    const { number } = useSpring({
+      from: { number: 0 },
+      number: n,
+      delay: 200,
+      config: { mass: 1, tension: 20, friction: 10 },
+    });
+    return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
+  }
 
   return (
     <div className="dark:bg-gray-950">
@@ -82,7 +82,7 @@ const IskconIn2023 = () => {
                   id={`stats-${data.id}`}
                   className="text-xl md:text-2xl font-bold mb-1 flex items-center"
                 >
-                  88
+                  <Number n={data.stats}/>
                   <span className="ml-1">+</span>
                 </h1>
 
