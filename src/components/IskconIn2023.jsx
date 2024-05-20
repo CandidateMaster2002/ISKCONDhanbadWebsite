@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import holybook from "../assets/books.jpg";
 import socialmedia from "../assets/socialmediamobile.jpg";
@@ -35,22 +35,22 @@ const ServiceData = [
 
 const IskconIn2023 = () => {
   const { t } = useTranslation();
-  // const [iconHeight, setIconHeight] = useState("auto");
+  const [iconHeight, setIconHeight] = useState("auto");
 
-  // useEffect(() => {
-  //   const maxHeight = Math.max(
-  //     ...ServiceData.map((data) => {
-  //       const titleHeight = document.getElementById(
-  //         `title-${data.id}`
-  //       )?.offsetHeight;
-  //       const statsHeight = document.getElementById(
-  //         `stats-${data.id}`
-  //       )?.offsetHeight;
-  //       return titleHeight + statsHeight;
-  //     })
-  //   );
-  //   setIconHeight(`${maxHeight}px`);
-  // }, []);
+  useEffect(() => {
+    const maxHeight = Math.max(
+      ...ServiceData.map((data) => {
+        const titleHeight = document.getElementById(
+          `title-${data.id}`
+        )?.offsetHeight;
+        const statsHeight = document.getElementById(
+          `stats-${data.id}`
+        )?.offsetHeight;
+        return titleHeight + statsHeight;
+      })
+    );
+    setIconHeight(`${maxHeight}px`);
+  }, []);
 
   function Number({ n }) {
     const { number } = useSpring({
@@ -74,7 +74,7 @@ const IskconIn2023 = () => {
               <img
                 src={data.icon}
                 alt=""
-                // style={{ height: iconHeight, width: iconHeight }}
+                style={{ height: iconHeight, width: iconHeight }}
                 className="rounded-full h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28"
               />
               <div>

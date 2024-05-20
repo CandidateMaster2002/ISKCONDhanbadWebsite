@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Gurukul from "../assets/voice_photo cropped.jpg";
 import IitJanmashtmi from "../assets/ISMJanmashtami/iitjanmashtmi.jpg";
 import JagJivanNagar from "../assets/ISKCONProjects/jagjivannagar.jpg";
+import { useEffect } from "react";
 
 const BlogData = [
   {
@@ -26,6 +27,9 @@ const BlogData = [
 ];
 const IskconDhanbadHighlights = () => {
   const { t } = useTranslation();
+
+  useEffect(()=>{},[])
+  
   return (
     <div className="my-12 dark:bg-gray-950">
       <div className="container">
