@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import i18n from "../../i18n";
 
@@ -7,18 +6,7 @@ const SwitchLanguage = () => {
     localStorage.getItem("language") || "hi"
   );
 
-  useEffect(() => {
-    if (!localStorage.getItem("language")) {
-      localStorage.setItem("language", "hi");
-    }
-    i18n.changeLanguage(language);
-  }, [language]);
 
-//   const handleLanguageChange = (selectedLanguage) => {
-//     localStorage.setItem("language", selectedLanguage);
-//     setLanguage(selectedLanguage);
-//     i18n.changeLanguage(selectedLanguage);
-//   };
 
   useEffect(() => {
     localStorage.setItem("language", language);
