@@ -1,4 +1,4 @@
-import React from "react";
+
 import PrabhupadaWalking from "../assets/prabhupadawalking.png";
 import PrabhupadaSitting from "../assets/prabhupadasitting.jpg";
 import SPKirtan from "../assets/spkirtan.png";

@@ -8,8 +8,8 @@ const OurServices = () => {
   const {t,i18n}=useTranslation();
 
   useEffect(() => {
-    // Set the language based on localStorage
-    const language = localStorage.getItem('language') || 'en'; // Default to 'en' if no language is set
+    
+    const language = localStorage.getItem('language') || 'en';
     i18n.changeLanguage(language);
   }, [i18n]);
 
