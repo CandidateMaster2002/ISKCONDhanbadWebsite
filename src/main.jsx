@@ -8,21 +8,21 @@ import "slick-carousel/slick/slick-theme.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "flowbite";
 import AboutIskcon from "./Pages/AboutIskcon.jsx";
-import AboutISKCONDhanbad from "./Pages/AboutISKCONDhanbad.jsx";
 import AboutISKCONFounder from "./Pages/AboutISKCONFounder.jsx";
-import BookDistribution from "./Pages/BookDistribution.jsx";
 import ContactUs from "./Pages/ContactUs.jsx";
-import DhanbadTribalCare from "./Pages/DhanbadTribalCare.jsx";
+// import AboutISKCONDhanbad from "./Pages/AboutISKCONDhanbad.jsx";
+// import BookDistribution from "./Pages/BookDistribution.jsx";
+// import DhanbadTribalCare from "./Pages/DhanbadTribalCare.jsx";
+// import GirlsEmpowerment from "./Pages/GirlsEmpowerment.jsx";
 import Donate from "./Pages/Donation/Donate.jsx";
-import GirlsEmpowerment from "./Pages/GirlsEmpowerment.jsx";
 import Home from "./Pages/Home.jsx";
 import PrivacyPolicy from "./Pages/PrivacyPolicy.jsx";
 import RefundCancel from "./Pages/RefundCancel.jsx";
 import TnC from "./Pages/TnC.jsx";
-import VillagePreaching from "./Pages/VillagePreaching.jsx";
-import YouthEmpowerment from "./Pages/YouthEmpowerment.jsx";
-import DhamYatra from "./Pages/DhamYatra.jsx";
-import Festivals from "./Pages/Festivals.jsx";
+// import VillagePreaching from "./Pages/VillagePreaching.jsx";
+// import YouthEmpowerment from "./Pages/YouthEmpowerment.jsx";
+// import DhamYatra from "./Pages/DhamYatra.jsx";
+// import Festivals from "./Pages/Festivals.jsx";
 import Faaltu from "./Pages/Faaltu.jsx";
 import TempleSchedule from "./Pages/TempleSchedule.jsx";
 import OurServices from "./components/OurServices/OurServices.jsx";
@@ -60,7 +60,6 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+ 
     <RouterProvider router={router} />
-  </React.StrictMode>
 );
