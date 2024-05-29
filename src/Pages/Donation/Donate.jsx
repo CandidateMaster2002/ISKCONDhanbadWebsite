@@ -5,6 +5,8 @@ import RazorpayLogo from "../../assets/razorpay.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LCMAlarnath from "../../assets/donation_page.jpg";
+import {useEffect} from 'react'
+
 const Donate = () => {
   const upiId = "ISKCON.eazypay@icici";
   const accountNo = "019601009491";
@@ -12,12 +14,19 @@ const Donate = () => {
   const accountName = "ISKCON";
   const razorPayLink = "https://rzp.io/l/iskcondhn";
 
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     alert(`${text} copied to clipboard!`);
   };
+
+  useEffect(() => {
+  
+    const language = localStorage.getItem('language') || 'en'; 
+    i18n.changeLanguage(language);
+  }, [i18n]);
+
 
   return (
     <div className="min-h-screen flex items-center justify-center dark:bg-gray-950 

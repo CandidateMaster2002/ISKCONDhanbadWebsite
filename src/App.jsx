@@ -22,7 +22,7 @@ const App = () => {
 
   return (
     <div className="dark:bg-gray-950 dark:text-white duration-200 overflow-hidden">
-      <ScrollToTop/>
+      <ScrollToTop />
       <TopmostNavbar />
       <MainNavbar />
       <Outlet />

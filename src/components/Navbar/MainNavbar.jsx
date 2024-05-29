@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { MobileNav, Typography, IconButton } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import iskcondhanbadLogo from "../../assets/iskcon-dhanbad-image-removebg-preview.png";
@@ -14,7 +14,13 @@ import Services from "../../assets/servicemic-removebg-preview.png";
 const MainNavbar = () => {
   const [openNav, setOpenNav] = React.useState(false);
 
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+
+  useEffect(() => {
+    // Set the language based on localStorage
+    const language = localStorage.getItem('language') || 'en'; // Default to 'en' if no language is set
+    i18n.changeLanguage(language);
+  }, [i18n]);
 
 
   const navList = (

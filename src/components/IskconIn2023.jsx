@@ -75,13 +75,13 @@ const IskconIn2023 = () => {
         <h1 className="text-2xl font-bold mb-6 text-center">
           {t("ISKCON Dhanbad in 2023")}
         </h1>
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 gap-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 gap-y-8">
           {ServiceData.map((data) => (
             <div key={data.id} className="flex items-center gap-4">
               <img
                 src={data.icon}
                 alt=""
-                style={{ height: iconHeight, width: iconHeight }}
+                // style={{ height: iconHeight, width: iconHeight }}
                 className="rounded-full h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28"
               />
               <div>
@@ -102,7 +102,7 @@ const IskconIn2023 = () => {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </div>
   );

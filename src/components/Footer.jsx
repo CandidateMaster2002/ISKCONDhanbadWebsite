@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import { ActivitiesLinks, AboutLinks } from "../InfoAndData.js";
 import { FaMobileAlt } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
@@ -14,7 +14,12 @@ import {
 } from "react-icons/fa6";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const language = localStorage.getItem("language") || "en";
+    i18n.changeLanguage(language);
+  }, [i18n]);
 
   return (
     <div className="dark:bg-gray-950">
@@ -39,7 +44,7 @@ const Footer = () => {
               to="donate"
               className="inline-block bg-primary/90 text-white py-2 px-4 mt-4 text-sm rounded-full"
             >
-             {t("DONATE Now")} !
+              {t("DONATE Now")} !
             </Link>
           </div>
 

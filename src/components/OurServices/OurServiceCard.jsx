@@ -1,8 +1,17 @@
 import Button from "../Shared/Button";
 import { useTranslation } from "react-i18next";
+import {useEffect} from 'react'
+
+
 const OurServiceCard = ({ data }) => {
 
-  const { t } = useTranslation();
+  const { t ,i18n} = useTranslation();
+
+  useEffect(() => {
+    const language = localStorage.getItem('language') || 'en'; 
+    i18n.changeLanguage(language);
+  }, [i18n]);
+
 
   return (
     <div className="mb-10">

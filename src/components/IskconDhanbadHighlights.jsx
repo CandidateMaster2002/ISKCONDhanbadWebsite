@@ -8,28 +8,31 @@ import { useEffect } from "react";
 const BlogData = [
   {
     title: "Jet Age Gurukul",
-    subtitle:"jet-age-gurukul-subtitle",
+    subtitle: "jet-age-gurukul-subtitle",
     image: Gurukul,
     aosDelay: "0",
   },
   {
     title: "IIT Dhanbad Official Janmashatmi",
-    subtitle:"iit-dhanbad-janmashtmi-subtitle",
+    subtitle: "iit-dhanbad-janmashtmi-subtitle",
     image: IitJanmashtmi,
     aosDelay: "200",
   },
   {
     title: "Upcoming ISKCON Meditation Center",
-    subtitle:"iskcon-meditation-center-subtitle",
+    subtitle: "iskcon-meditation-center-subtitle",
     image: JagJivanNagar,
     aosDelay: "400",
   },
 ];
 const IskconDhanbadHighlights = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  useEffect(()=>{},[])
-  
+  useEffect(() => {
+    const language = localStorage.getItem("language") || "en";
+    i18n.changeLanguage(language);
+  }, [i18n]);
+
   return (
     <div className="my-12 dark:bg-gray-950">
       <div className="container">
