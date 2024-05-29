@@ -23,7 +23,6 @@ import TnC from "./Pages/TnC.jsx";
 // import YouthEmpowerment from "./Pages/YouthEmpowerment.jsx";
 // import DhamYatra from "./Pages/DhamYatra.jsx";
 // import Festivals from "./Pages/Festivals.jsx";
-import Faaltu from "./Pages/Faaltu.jsx";
 import TempleSchedule from "./Pages/TempleSchedule.jsx";
 import OurServices from "./components/OurServices/OurServices.jsx";
 import DonateEveryMonth from "./Pages/Donation/DonateEveryMonth.jsx";
@@ -41,7 +40,6 @@ const router = createBrowserRouter([
       { path: "contact-us", element: <ContactUs /> },
       { path: "tribal-care", element: <ComingSoon /> },
       { path: "donate", element: <Donate /> },
-      { path: "Faaltu", element: <Faaltu /> },
       { path: "girls-empowerment", element: <ComingSoon /> },
       { path: "privacy-policy", element: <PrivacyPolicy /> },
       { path: "refund-cancel", element: <RefundCancel /> },

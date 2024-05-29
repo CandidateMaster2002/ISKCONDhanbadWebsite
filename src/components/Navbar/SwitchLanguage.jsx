@@ -1,24 +1,25 @@
-import { useState, useEffect } from "react";
-import i18n from "../../i18n";
+import  { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const SwitchLanguage = () => {
+  const { i18n } = useTranslation();
   const [language, setLanguage] = useState(
-    localStorage.getItem("language") || "hi"
+    localStorage.getItem("language") || "en"
   );
 
-
-
   useEffect(() => {
-    localStorage.setItem("language", language);
     i18n.changeLanguage(language);
-    console.log(language)
-  });
+    localStorage.setItem("language", language);
+  }, [language, i18n]);
 
+  const handleChangeLanguage = (lang) => {
+    setLanguage(lang);
+  };
 
   return (
     <div>
       <button
-        onClick={() => setLanguage("en")}
+        onClick={() => handleChangeLanguage("en")}
         className={`${
           language === "en"
             ? "bg-blue-500 text-white"
@@ -29,7 +30,7 @@ const SwitchLanguage = () => {
         ENG
       </button>
       <button
-        onClick={() => setLanguage("hi")}
+        onClick={() => handleChangeLanguage("hi")}
         className={`${
           language === "hi"
             ? "bg-blue-500 text-white"

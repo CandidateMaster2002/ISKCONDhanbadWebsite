@@ -23,7 +23,7 @@ const DownFooter = () => {
           </li>
           <li>
             <Link to="refund-cancel" className="hover:underline me-4 md:me-6">
-              Refund & Cancellation Policy
+              Refund and Cancellation Policy
             </Link>
           </li>
         </ul>
