@@ -11,6 +11,7 @@ const SwitchLanguage = () => {
   useEffect(() => {
     localStorage.setItem("language", language);
     i18n.changeLanguage(language);
+    console.log(language)
   });
 
 

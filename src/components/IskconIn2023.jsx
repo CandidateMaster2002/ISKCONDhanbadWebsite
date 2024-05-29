@@ -35,21 +35,21 @@ const ServiceData = [
 
 const IskconIn2023 = () => {
   const { t } = useTranslation();
-  const [iconHeight, setIconHeight] = useState("auto");
+  // const [iconHeight, setIconHeight] = useState("auto");
 
   useEffect(() => {
-    const maxHeight = Math.max(
-      ...ServiceData.map((data) => {
-        const titleHeight = document.getElementById(
-          `title-${data.id}`
-        )?.offsetHeight;
-        const statsHeight = document.getElementById(
-          `stats-${data.id}`
-        )?.offsetHeight;
-        return titleHeight + statsHeight;
-      })
-    );
-    setIconHeight(`${maxHeight}px`);
+    // const maxHeight = Math.max(
+    //   ...ServiceData.map((data) => {
+    //     const titleHeight = document.getElementById(
+    //       `title-${data.id}`
+    //     )?.offsetHeight;
+    //     const statsHeight = document.getElementById(
+    //       `stats-${data.id}`
+    //     )?.offsetHeight;
+    //     return titleHeight + statsHeight;
+    //   })
+    // );
+    // setIconHeight(`${maxHeight}px`);
   }, []);
 
   function Number({ n }) {
@@ -66,9 +66,9 @@ const IskconIn2023 = () => {
     <div className="dark:bg-gray-950">
       <div className="container my-14 md:my-20">
         <h1 className="text-2xl font-bold mb-6 text-center">
-         {t("ISKCON Dhanbad in 2023")} 
+          {t("ISKCON Dhanbad in 2023")}
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 gap-y-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 gap-y-8">
           {ServiceData.map((data) => (
             <div key={data.id} className="flex items-center gap-4">
               <img
@@ -95,7 +95,7 @@ const IskconIn2023 = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
