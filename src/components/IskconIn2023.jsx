@@ -34,23 +34,30 @@ const ServiceData = [
 ];
 
 const IskconIn2023 = () => {
-  const { t } = useTranslation();
+  const { t ,i18n} = useTranslation();
   // const [iconHeight, setIconHeight] = useState("auto");
 
+  // useEffect(() => {
+  //   const maxHeight = Math.max(
+  //     ...ServiceData.map((data) => {
+  //       const titleHeight = document.getElementById(
+  //         `title-${data.id}`
+  //       )?.offsetHeight;
+  //       const statsHeight = document.getElementById(
+  //         `stats-${data.id}`
+  //       )?.offsetHeight;
+  //       return titleHeight + statsHeight;
+  //     })
+  //   );
+  //   setIconHeight(`${maxHeight}px`);
+  // }, []);
+
   useEffect(() => {
-    // const maxHeight = Math.max(
-    //   ...ServiceData.map((data) => {
-    //     const titleHeight = document.getElementById(
-    //       `title-${data.id}`
-    //     )?.offsetHeight;
-    //     const statsHeight = document.getElementById(
-    //       `stats-${data.id}`
-    //     )?.offsetHeight;
-    //     return titleHeight + statsHeight;
-    //   })
-    // );
-    // setIconHeight(`${maxHeight}px`);
-  }, []);
+    // Set the language based on localStorage
+    const language = localStorage.getItem('language') || 'en'; // Default to 'en' if no language is set
+    i18n.changeLanguage(language);
+  }, [i18n]);
+
 
   function Number({ n }) {
     const { number } = useSpring({
